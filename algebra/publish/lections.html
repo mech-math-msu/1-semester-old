@@ -545,9 +545,9 @@ class="math inline">\(\operatorname{deg}f &lt;
 \operatorname{deg}g\)</span>, то очевидно. Иначе <span
 class="math inline">\(\operatorname{deg}f \ge
 \operatorname{deg}g\)</span>. Рассмотрим <span class="math inline">\(f’
-= f -- \frac{a_n}{b_n}x^{n -- m}\)</span>. Если <span
+= f - \frac{a_n}{b_n}x^{n - m}\)</span>. Если <span
 class="math inline">\(\operatorname{deg} f’ &lt; g\)</span>, то <span
-class="math inline">\(f = g \cdot \frac{a_n}{b_n}x^{n -- m} +
+class="math inline">\(f = g \cdot \frac{a_n}{b_n}x^{n - m} +
 f’\)</span>. Иначе переобозначаем <span class="math inline">\(f =
 f’\)</span>.</p>
 <p>Докажем, что <span class="math inline">\(h, r\)</span> единственны.
@@ -606,25 +606,25 @@ f\]</span> <span class="math display">\[\operatorname{deg} f_2 &lt;
 <hr />
 <p>Пусть <span class="math inline">\(f \in F[x]\)</span>. Поделим <span
 class="math inline">\(f\)</span> с остатком на <span
-class="math inline">\(x -- c\)</span>: <span class="math inline">\(f(x)
-= (x -- c)\cdot h(x) + r(x)\)</span>. <span
+class="math inline">\(x - c\)</span>: <span class="math inline">\(f(x) =
+(x - c)\cdot h(x) + r(x)\)</span>. <span
 class="math inline">\(\operatorname{deg} r(x) &lt; \operatorname{deg} (x
--- c) = 1 \Rightarrow \operatorname{deg} r(x) = 0 \Rightarrow r(x) = r
+- c) = 1 \Rightarrow \operatorname{deg} r(x) = 0 \Rightarrow r(x) = r
 \in F \Rightarrow f(c) = r\)</span></p>
 <p><strong>Теорема:</strong><a name="theorem-3"></a> (Безу) Пусть <span
 class="math inline">\(f \in F[x], \,\,\,\, f \ne 0\)</span>. <span
 class="math inline">\(c\)</span> – корень многочлена <span
-class="math inline">\(f \Leftrightarrow f(x) = (x -- c)\cdot g(x),
+class="math inline">\(f \Leftrightarrow f(x) = (x - c)\cdot g(x),
 \,\,\,\, g(x) \ne 0\)</span>.</p>
 <p><em>Доказательство:</em> <span
 class="math display">\[\Rightarrow\]</span> Поделим <span
 class="math inline">\(f\)</span> с остатком на <span
-class="math inline">\(x -- c\)</span>: <span class="math inline">\(f(x)
-= (x -- c)\cdot h(x) + r(x)\)</span>. <span
+class="math inline">\(x - c\)</span>: <span class="math inline">\(f(x) =
+(x - c)\cdot h(x) + r(x)\)</span>. <span
 class="math inline">\(c\)</span> – корень <span
 class="math inline">\(f(x) \Rightarrow f(c) = 0 \Rightarrow r(x) =
 0\)</span> <span class="math display">\[\Leftarrow\]</span> <span
-class="math inline">\(f(x) = (x -- c)\cdot g(x) \Rightarrow f(c) = 0
+class="math inline">\(f(x) = (x - c)\cdot g(x) \Rightarrow f(c) = 0
 \,\,\,\,\blacksquare\)</span></p>
 <h2 id="корни-многочлена-и-их-кратности">Корни многочлена и их
 кратности</h2>
@@ -634,7 +634,7 @@ class="math inline">\(f \in F[x]\)</span>. <span
 class="math inline">\(c\)</span> – <em>корень кратности</em> <span
 class="math inline">\(k\)</span> многочлена <span
 class="math inline">\(f\)</span>, если <span class="math inline">\(f(x)
-= (x -- c)^k\cdot g(x)\)</span>.</p>
+= (x - c)^k\cdot g(x)\)</span>.</p>
 <h2
 id="число-корней-с-учетом-кратностей-многочлена-над-полем-не-превосходит-его-степени">Число
 корней с учетом кратностей многочлена над полем не превосходит его
@@ -647,11 +647,11 @@ F[x]\)</span> не превосходит его степени.</p>
 \ldots, x_m\)</span> корни многочлена <span
 class="math inline">\(f\)</span> возможно совпадающие. Тогда по <a
 href="#theorem-3">теореме Безу</a> <span class="math inline">\(f(x) = (x
--- x_1)\cdot(x -- x_2)\cdot \ldots \cdot (x -- x_m) \cdot g(x)\)</span>,
+- x_1)\cdot(x - x_2)\cdot \ldots \cdot (x - x_m) \cdot g(x)\)</span>,
 где <span class="math inline">\(g(x)\)</span> неприводимый многочлен над
 полем <span class="math inline">\(F\)</span>. Имеем <span
-class="math inline">\(\operatorname{deg}((x -- x_1)\cdot(x -- x_2)\cdot
-\ldots \cdot (x -- x_m)) = m = \operatorname{deg}f(x) --
+class="math inline">\(\operatorname{deg}((x - x_1)\cdot(x - x_2)\cdot
+\ldots \cdot (x - x_m)) = m = \operatorname{deg}f(x) -
 \operatorname{deg}g(x) \le \operatorname{deg}f(x)
 \,\,\,\,\blacksquare\)</span></p>
 <h2
@@ -671,7 +671,7 @@ class="math inline">\(\mathbb{C}\)</span> неприводим только ли
 <p><strong>Теорема:</strong><a name="theorem-7"></a> Над полем <span
 class="math inline">\(\mathbb{R}\)</span> неприводимы линейные и
 многочлены вида <span class="math inline">\(ax^2 + bx + c\)</span>, у
-которых <span class="math inline">\(D = b^2 -- 4ac &lt; 0\)</span>.</p>
+которых <span class="math inline">\(D = b^2 - 4ac &lt; 0\)</span>.</p>
 <p><em>Доказательство:</em> Пусть <span class="math inline">\(f\)</span>
 неприводим над полем <span class="math inline">\(\mathbb{R}\)</span>.
 Рассмотрим этот многочлен над полем <span
@@ -684,8 +684,8 @@ class="math inline">\(\overline{c}\)</span> тоже корень многочл
 class="math inline">\(f\)</span>. Если <span class="math inline">\(c =
 \overline{c} \Rightarrow c \in \mathbb{R} \Rightarrow g(x)\)</span> –
 константа. Иначе <span class="math inline">\(g(\overline{c}) = 0
-\Rightarrow g(x) = (x -- \overline{c})\cdot h(x) \Rightarrow f(x) = (x
--- c)\cdot (x -- \overline{c})\cdot h(x) = (x^2 -- (c + \overline{c})x +
+\Rightarrow g(x) = (x - \overline{c})\cdot h(x) \Rightarrow f(x) = (x -
+c)\cdot (x - \overline{c})\cdot h(x) = (x^2 - (c + \overline{c})x +
 c\cdot \overline{c})\cdot h(x) \,\,\,\,\blacksquare\)</span></p>
 <h2 id="операция-дифференцирования-в-кольце-многочленов">Операция
 дифференцирования в кольце многочленов</h2>
@@ -694,7 +694,7 @@ c\cdot \overline{c})\cdot h(x) \,\,\,\,\blacksquare\)</span></p>
 многочлена <span class="math inline">\(f \in F[x], \,\,\,\,\,\,\,\, f =
 a_0 + a_1 x + a_2 x^2 + \ldots + a_n x^n\)</span> – это многочлен <span
 class="math inline">\(f’ = a_1 + 2 \cdot a_2 x + \ldots + n \cdot a_n
-x^{n -- 1}\)</span>.</p>
+x^{n - 1}\)</span>.</p>
 <h3 id="свойства-производной">Свойства производной</h3>
 <hr />
 <p><strong>Теорема:</strong><a name="theorem-8"></a> (Свойства
@@ -713,9 +713,9 @@ f_2 \end{cases}\)</span>. Тогда <span class="math inline">\((f \cdot g)’
 f_1’\cdot g + g’ \cdot f_1 + f_2’\cdot g + g’ \cdot f_2 = f’\cdot g + g’
 \cdot f\)</span>. Осталось доказать для многочленов вида <span
 class="math inline">\(a x^k\)</span>, так как для суммы верно. <span
-class="math display">\[(a x^k \cdot b x^l)’ = ab(k + l)\cdot x^{k + l --
+class="math display">\[(a x^k \cdot b x^l)’ = ab(k + l)\cdot x^{k + l -
 1}\]</span> <span class="math display">\[(a x^k)’ \cdot b x^l + a x^k
-\cdot (b x^l)’ = ab(k + l)\cdot x^{k + l -- 1}
+\cdot (b x^l)’ = ab(k + l)\cdot x^{k + l - 1}
 \,\,\,\,\blacksquare\]</span></p>
 <h2
 id="поведение-при-дифференцировании-кратности-корней-многочлена-над-полем-характеристики-ноль">Поведение
@@ -728,13 +728,13 @@ class="math inline">\(f \in F[x], \,\,\,\, c\)</span> – корень крат�
 class="math inline">\(f\)</span>, <span
 class="math inline">\(\operatorname{char}F \nmid k\)</span>. Тогда <span
 class="math inline">\(c\)</span> – корень кратности <span
-class="math inline">\(k -- 1\)</span> у производной многочлена <span
+class="math inline">\(k - 1\)</span> у производной многочлена <span
 class="math inline">\(f’\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math display">\[f(x) = (x --
+<p><em>Доказательство:</em> <span class="math display">\[f(x) = (x -
 c)^k \cdot g(x), \,\,\,\, g(c) \ne 0\]</span> <span
-class="math display">\[f’(x) = k \cdot (x -- c)^{k -- 1} \cdot g(x) + (x
--- c)^k \cdot g’(x) = (x -- c)^{k -- 1} \cdot (k \cdot g(x) + (x --
-c)\cdot g’(x)), \,\,\,\, g(c) \ne 0 \,\,\,\,\blacksquare\]</span></p>
+class="math display">\[f’(x) = k \cdot (x - c)^{k - 1} \cdot g(x) + (x -
+c)^k \cdot g’(x) = (x - c)^{k - 1} \cdot (k \cdot g(x) + (x - c)\cdot
+g’(x)), \,\,\,\, g(c) \ne 0 \,\,\,\,\blacksquare\]</span></p>
 <h2
 id="число-комплексных-корней-многочлена-с-учётом-кратности.-как-найти-число-различных-комплексных-корней-данного-многочлена">Число
 комплексных корней многочлена с учётом кратности. Как найти число
@@ -745,15 +745,15 @@ class="math inline">\(f \in \mathbb{C}[x], f \ne 0\)</span>. Тогда у
 многочлена <span class="math inline">\(\frac{f}{\gcd{(f, f’)}}\)</span>
 те же корни, что и у <span class="math inline">\(f\)</span>, но
 кратности <span class="math inline">\(1\)</span>.</p>
-<p><em>Доказательство:</em> <span class="math display">\[f = (x --
-x_1)^{k_1}\cdot (x -- x_2)^{k_2} \cdot \ldots \cdot (x -- x_m)^{k_m}
-\cdot g(x)\]</span> По <a href="#theorem-9">теореме</a> <span
-class="math display">\[f’ = (x -- x_1)^{k_1 -- 1}\cdot (x -- x_2)^{k_2
--- 1} \cdot \ldots \cdot (x -- x_m)^{k_m -- 1} \cdot h(x)\]</span></p>
-<p><span class="math display">\[\gcd{(f, f’)} = (x -- x_1)^{k_1 --
-1}\cdot (x -- x_2)^{k_2 -- 1} \cdot \ldots \cdot (x -- x_m)^{k_m -- 1}
-\cdot p(x)\]</span> <span class="math display">\[\frac{f}{\gcd{(f, f’)}}
-= (x -- x_1)\cdot (x -- x_2) \cdot \ldots \cdot (x -- x_m)\cdot
+<p><em>Доказательство:</em> <span class="math display">\[f = (x -
+x_1)^{k_1}\cdot (x - x_2)^{k_2} \cdot \ldots \cdot (x - x_m)^{k_m} \cdot
+g(x)\]</span> По <a href="#theorem-9">теореме</a> <span
+class="math display">\[f’ = (x - x_1)^{k_1 - 1}\cdot (x - x_2)^{k_2 - 1}
+\cdot \ldots \cdot (x - x_m)^{k_m - 1} \cdot h(x)\]</span></p>
+<p><span class="math display">\[\gcd{(f, f’)} = (x - x_1)^{k_1 - 1}\cdot
+(x - x_2)^{k_2 - 1} \cdot \ldots \cdot (x - x_m)^{k_m - 1} \cdot
+p(x)\]</span> <span class="math display">\[\frac{f}{\gcd{(f, f’)}} = (x
+- x_1)\cdot (x - x_2) \cdot \ldots \cdot (x - x_m)\cdot
 \frac{g(x)}{p(x)} \,\,\,\,\blacksquare\]</span></p>
 <h1 id="поле-рациональных-дробей">Поле рациональных дробей</h1>
 <hr />
