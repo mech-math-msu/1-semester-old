@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2023-01-01" />
+  <meta name="keywords" content="математичекий
+анализ, матан, экзамен, матаааан, лекции, мгу, мехмат, тех, техать, 1
+курс" />
+  <title>Математический анализ</title>
+  <p><link rel="stylesheet" href="utils/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Playfair:opsz@5..1200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"></p>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+<!--<link rel="stylesheet" type="text/css" href="https://jsxgraph.org/distrib/jsxgraph.css" />
+ <script type="text/javascript" src="https://jsxgraph.org/distrib/jsxgraphcore.js"></script>-->
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Математический анализ</h1>
+<p class="date">2023</p>
+</header>
+<details>
+<summary>Содержание</summary>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#билеты-экзамена" id="toc-билеты-экзамена">Билеты
+экзамена</a>
+<ul>
+<li><a
+href="#предел-функции-по-коши-и-по-гейне-их-эквивалентность.-основные-свойства-предела-функции"
+id="toc-предел-функции-по-коши-и-по-гейне-их-эквивалентность.-основные-свойства-предела-функции">Предел
+функции по Коши и по Гейне, их эквивалентность. Основные свойства
+предела функции</a></li>
+<li><a
+href="#о-символика-для-функций-бесконечно-малые-и-бесконечно-большие-функции.-исчисление-бесконечно-малых-арифметические-свойства-предела.-предельный-переход-в-неравенствах.-критерий-коши-существования-предела-функции"
+id="toc-о-символика-для-функций-бесконечно-малые-и-бесконечно-большие-функции.-исчисление-бесконечно-малых-арифметические-свойства-предела.-предельный-переход-в-неравенствах.-критерий-коши-существования-предела-функции">О-символика
+для функций, бесконечно малые и бесконечно большие функции. Исчисление
+бесконечно малых, арифметические свойства предела. Предельный переход в
+неравенствах. Критерий Коши существования предела функции</a></li>
+<li><a
+href="#монотонные-функции-теорема-о-пределе-монотонной-и-ограниченной-функции"
+id="toc-монотонные-функции-теорема-о-пределе-монотонной-и-ограниченной-функции">Монотонные
+функции, теорема о пределе монотонной и ограниченной функции</a></li>
+<li><a
+href="#непрерывные-функции-локальные-свойства-непрерывных-функций.-точки-разрыва-их-классификация"
+id="toc-непрерывные-функции-локальные-свойства-непрерывных-функций.-точки-разрыва-их-классификация">Непрерывные
+функции, локальные свойства непрерывных функций. Точки разрыва, их
+классификация</a></li>
+<li><a href="#глобальные-свойства-непрерывных-функций"
+id="toc-глобальные-свойства-непрерывных-функций">Глобальные свойства
+непрерывных функций</a></li>
+<li><a
+href="#теорема-о-разрывах-монотонной-функции-теорема-о-обратной-функции-к-непрерывной-и-монотонной"
+id="toc-теорема-о-разрывах-монотонной-функции-теорема-о-обратной-функции-к-непрерывной-и-монотонной">Теорема
+о разрывах монотонной функции Теорема о обратной функции к непрерывной и
+монотонной</a></li>
+<li><a href="#равномерно-непрерывные-функции-теорема-кантора"
+id="toc-равномерно-непрерывные-функции-теорема-кантора">Равномерно
+непрерывные функции, теорема Кантора</a></li>
+<li><a
+href="#построение-показательной-функции.-логарифм-степенная-функция-синус-и-косинус"
+id="toc-построение-показательной-функции.-логарифм-степенная-функция-синус-и-косинус">Построение
+показательной функции. Логарифм, степенная функция, синус и
+косинус</a></li>
+<li><a href="#замечательные-пределы-следствия-из-них"
+id="toc-замечательные-пределы-следствия-из-них">Замечательные пределы,
+следствия из них</a></li>
+<li><a
+href="#производная-функции-производная-по-множеству.-производная-суммы-произведения-и-отношения-функций"
+id="toc-производная-функции-производная-по-множеству.-производная-суммы-произведения-и-отношения-функций">Производная
+функции, производная по множеству. Производная суммы, произведения и
+отношения функций</a></li>
+<li><a
+href="#производная-композиции-функций-производная-обратной-функции.-таблица-производных"
+id="toc-производная-композиции-функций-производная-обратной-функции.-таблица-производных">Производная
+композиции функций, производная обратной функции. Таблица
+производных</a></li>
+<li><a
+href="#дифференцируемость-функций-первый-дифференциал.-связь-между-дифференцируемостью-и-существованием-производной"
+id="toc-дифференцируемость-функций-первый-дифференциал.-связь-между-дифференцируемостью-и-существованием-производной">Дифференцируемость
+функций, первый дифференциал. Связь между дифференцируемостью и
+существованием производной</a>
+<ul>
+<li><a href="#дифференциал-независимой-переменной"
+id="toc-дифференциал-независимой-переменной">Дифференциал независимой
+переменной</a></li>
+</ul></li>
+<li><a
+href="#полукасательные-и-касательная-к-графику-функции.-геометрический-смысл-первого-дифференциала.-инвариантность-первого-дифференциала-и-неинвариантность-производной"
+id="toc-полукасательные-и-касательная-к-графику-функции.-геометрический-смысл-первого-дифференциала.-инвариантность-первого-дифференциала-и-неинвариантность-производной">Полукасательные
+и касательная к графику функции. Геометрический смысл первого
+дифференциала. Инвариантность первого дифференциала и неинвариантность
+производной</a>
+<ul>
+<li><a
+href="#инвариантность-первого-дифференциала-и-неинвариантность-производной"
+id="toc-инвариантность-первого-дифференциала-и-неинвариантность-производной">Инвариантность
+первого дифференциала и неинвариантность производной</a></li>
+<li><a href="#полукасательные-и-касательная-к-графику-функции"
+id="toc-полукасательные-и-касательная-к-графику-функции">Полукасательные
+и касательная к графику функции</a></li>
+<li><a href="#геометрический-смысл-первого-дифференциала"
+id="toc-геометрический-смысл-первого-дифференциала">Геометрический смысл
+первого дифференциала</a></li>
+</ul></li>
+<li><a
+href="#старшие-производные.-старшие-дифференциалы.-неинвариантность-второго-дифференциала"
+id="toc-старшие-производные.-старшие-дифференциалы.-неинвариантность-второго-дифференциала">Старшие
+производные. Старшие дифференциалы. Неинвариантность второго
+дифференциала</a></li>
+<li><a
+href="#теорема-ферма-необходимый-признак-локального-экстремума-теорема-ролля.-формула-лагранжа-и-следствие-из-неё"
+id="toc-теорема-ферма-необходимый-признак-локального-экстремума-теорема-ролля.-формула-лагранжа-и-следствие-из-неё">Теорема
+Ферма, необходимый признак локального экстремума, теорема Ролля. Формула
+Лагранжа и следствие из неё</a></li>
+<li><a
+href="#формула-коши.-связь-монотонности-функции-и-знака-производной"
+id="toc-формула-коши.-связь-монотонности-функции-и-знака-производной">Формула
+Коши. Связь монотонности функции и знака производной</a></li>
+<li><a
+href="#отсутствие-у-производной-дифференцируемой-функции-устранимых-разрывов-и-разрывов-первого-рода.-теорема-дарбу-о-промежуточных-значениях-производной"
+id="toc-отсутствие-у-производной-дифференцируемой-функции-устранимых-разрывов-и-разрывов-первого-рода.-теорема-дарбу-о-промежуточных-значениях-производной">Отсутствие
+у производной дифференцируемой функции устранимых разрывов и разрывов
+первого рода. Теорема Дарбу о промежуточных значениях
+производной</a></li>
+<li><a href="#правила-лопиталя" id="toc-правила-лопиталя">Правила
+Лопиталя</a></li>
+<li><a
+href="#формула-тейлора.-остаточный-член-в-форме-пеано-и-в-общей-форме.-остаточный-член-в-форме-лагранжа"
+id="toc-формула-тейлора.-остаточный-член-в-форме-пеано-и-в-общей-форме.-остаточный-член-в-форме-лагранжа">Формула
+Тейлора. Остаточный член в форме Пеано и в общей форме. Остаточный член
+в форме Лагранжа</a></li>
+<li><a
+href="#формула-тейлора-для-основных-элементарных-функций.-достаточные-условия-локального-экстремума.-общая-схема-поиска-глобального-экстремума-функции-на-отрезке"
+id="toc-формула-тейлора-для-основных-элементарных-функций.-достаточные-условия-локального-экстремума.-общая-схема-поиска-глобального-экстремума-функции-на-отрезке">Формула
+Тейлора для основных элементарных функций. Достаточные условия
+локального экстремума. Общая схема поиска глобального экстремума функции
+на отрезке</a></li>
+<li><a
+href="#выпуклые-функции-достаточное-условие-строгой-выпуклости.-теорема-о-касательной-к-графику-выпуклой-функции.-точки-перегиба.-необходимое-и-достаточные-условия-наличия-точки-перегиба.-асимптоты"
+id="toc-выпуклые-функции-достаточное-условие-строгой-выпуклости.-теорема-о-касательной-к-графику-выпуклой-функции.-точки-перегиба.-необходимое-и-достаточные-условия-наличия-точки-перегиба.-асимптоты">Выпуклые
+функции, достаточное условие строгой выпуклости. Теорема о касательной к
+графику выпуклой функции. Точки перегиба. Необходимое и достаточные
+условия наличия точки перегиба. Асимптоты</a>
+<ul>
+<li><a href="#асимптоты" id="toc-асимптоты">Асимптоты</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+</details>
+<h1 id="билеты-экзамена">Билеты экзамена</h1>
+<hr />
+<h2
+id="предел-функции-по-коши-и-по-гейне-их-эквивалентность.-основные-свойства-предела-функции">Предел
+функции по Коши и по Гейне, их эквивалентность. Основные свойства
+предела функции</h2>
+<hr />
+<p><strong>Определение:</strong><a name="definition-0"></a> (По Коши)
+Предел функции <span class="math inline">\(f(x)\)</span> при <span
+class="math inline">\(x\)</span> стремящемся к <span
+class="math inline">\(x_0\)</span> равен <span
+class="math inline">\(a\)</span>, если: <span
+class="math display">\[\forall \varepsilon &gt; 0 \,\,\,\, \exists
+\delta &gt; 0: \,\,\,\, \forall x \in \mathring{B}_{\delta}(x_0)
+\,\,\,\, f(x) \in B_{\varepsilon}(a)\]</span> Обозначается: <span
+class="math inline">\(\displaystyle \lim_{x\to x_0} f(x) =
+a\)</span></p>
+<p><strong>Определение:</strong><a name="definition-1"></a> (По Гейне)
+Предел функции <span class="math inline">\(f(x)\)</span> при <span
+class="math inline">\(x\)</span> стремящемся к <span
+class="math inline">\(x_0\)</span> равен <span
+class="math inline">\(a\)</span>, если: <span
+class="math display">\[\forall \displaystyle \{x_n\}_{n = 1}^{\infty}:
+\left( \forall n \,\,\,\, x_n \ne x_0 \,\,\,\, \exists \displaystyle
+\lim_{n\to \infty}x_n = x_0 \right)\,\,\,\,\,\,\,\, \exists
+\displaystyle \lim_{n\to \infty}f(x_n) = a\]</span></p>
+<p><strong>Теорема:</strong><a name="theorem-0"></a> Определение предела
+по Коши <span class="math inline">\(\Leftrightarrow\)</span> определнию
+предела по Гейне.</p>
+<p><em>Доказательство:</em></p>
+<p><strong>Теорема:</strong><a name="theorem-7"></a> Если <span
+class="math inline">\(\exists \displaystyle \lim_{x\to x_0}f(x) =
+a\)</span>, то он единственный.</p>
+<p><em>Доказательство:</em> Гейне.</p>
+<p><strong>Теорема:</strong><a name="theorem-8"></a> Если <span
+class="math inline">\(\exists \displaystyle \lim_{x\to x_0}f(x) =
+a\)</span>, то <span class="math inline">\(\exists c, \,\,\,\, \exists
+\delta &gt; 0: \,\,\,\,\forall x \in \mathring{B}_{\delta}(x_0) \,\,\,\,
+|f(x)| &lt; c\)</span></p>
+<p><em>Доказательство:</em> <span class="math inline">\(\exists \delta
+&gt; 0: \,\,\,\, \forall x: 0 &lt; |x - x_0| &lt; \delta \,\,\,\, |f(x)
+- a| &lt; 1 \Rightarrow a - 1 &lt; f(x) &lt; a + 1
+\,\,\,\,\blacksquare\)</span></p>
+<p><strong>Теорема:</strong><a name="theorem-9"></a> (Отделимость) Пусть
+<span class="math inline">\(\exists \displaystyle \lim_{x\to x_0}f(x) =
+a\)</span> и <span class="math inline">\(b \ne a\)</span>. Тогда <span
+class="math inline">\(\exists \varepsilon &gt; 0, \,\,\,\, \exists
+\delta &gt; 0: \,\,\,\, f(\mathring{B}_{\delta}(x_0)) \cap
+B_{\varepsilon}(b) = \varnothing\)</span></p>
+<p><em>Доказательство:</em> <span class="math inline">\(\exists \delta
+&gt; 0: \,\,\,\, \forall x: 0 &lt; |x - x_0| &lt; \delta \,\,\,\, |f(x)
+- a| &lt; \frac{|b - a|}{3}\)</span>. Возьмем <span
+class="math inline">\(\varepsilon = \frac{|b - a|}{3}
+\,\,\,\,\blacksquare\)</span></p>
+<p><strong>Определение:</strong><a name="definition-6"></a> Пусть <span
+class="math inline">\(A \subset \mathbb{R}\)</span> и <span
+class="math inline">\(x_0 \in A’\)</span> (множество предельных точек
+<span class="math inline">\(A\)</span>). Если <span
+class="math inline">\(\forall \varepsilon &gt; 0 \,\,\,\, \exists \delta
+&gt; 0: \,\,\,\, \forall x \in \mathring{B}_{\delta}(x_0) \cap A
+\,\,\,\, |f(x) - a| &lt; \varepsilon\)</span>, то <span
+class="math inline">\(a\)</span> является пределом <span
+class="math inline">\(f(x)\)</span> в точке <span
+class="math inline">\(x_0\)</span> по множеству <span
+class="math inline">\(A\)</span>.</p>
+<p>Обозначается: <span class="math inline">\(\displaystyle \lim_{x\to
+x_0, x \in A}f(x) = a\)</span></p>
+<p><strong>Замечание:</strong> <span class="math inline">\(\displaystyle
+\lim_{x\to x_0, x \in (x_0, +\infty)}f(x)\)</span> обозначается <span
+class="math inline">\(\displaystyle \lim_{x\to x_0+0}f(x)\)</span></p>
+<p><strong>Теорема:</strong><a name="theorem-10"></a> Пусть <span
+class="math inline">\(\displaystyle \lim_{x\to x_0, x \in A}f(x) =
+a\)</span> и <span class="math inline">\(A_1 \subset A, \,\,\,\, x_0 \in
+A_1\)</span>. Тогда <span class="math inline">\(\exists \displaystyle
+\lim_{x\to x_0, x \in A_1}f(x) = a\)</span></p>
+<p><em>Доказательство:</em> Гейне.</p>
+<h2
+id="о-символика-для-функций-бесконечно-малые-и-бесконечно-большие-функции.-исчисление-бесконечно-малых-арифметические-свойства-предела.-предельный-переход-в-неравенствах.-критерий-коши-существования-предела-функции">О-символика
+для функций, бесконечно малые и бесконечно большие функции. Исчисление
+бесконечно малых, арифметические свойства предела. Предельный переход в
+неравенствах. Критерий Коши существования предела функции</h2>
+<hr />
+<p><strong>Определение:</strong><a name="definition-4"></a> <span
+class="math inline">\(f(x) = \underline{\underline{O}}(g(x))\)</span>на
+<span class="math inline">\(\mathring{B}_{\delta}(x_0)\)</span>, при
+<span class="math inline">\(x \to x_0\)</span>, если <span
+class="math display">\[\exists C&gt;0: \,\,\,\,|f(x)| \le C \cdot |g(x)|
+\,\,\,\, \forall x \in \mathring{B}_{\delta}(x_0)\]</span></p>
+<p><strong>Определение:</strong><a name="definition-5"></a> <span
+class="math inline">\(f(x) = \overline{\overline{o}}(g(x))\)</span>, при
+<span class="math inline">\(x \to x_0\)</span>, если <span
+class="math display">\[f(x) = \alpha(x) \cdot g(x), \,\,\,\,
+\displaystyle \lim_{x\to x_0}\alpha(x) = 0\]</span></p>
+<p><strong>Определение:</strong><a name="definition-2"></a> <span
+class="math inline">\(f(x)\)</span> - бесконечно большая функция при
+<span class="math inline">\(x \to x_0 \,\,\,\, (x \to \infty)\)</span>,
+если: <span class="math display">\[\forall \varepsilon &gt; 0 \,\,\,\,
+\exists \delta &gt; 0: \forall x \in \mathring{B}_{\delta}(x_0) \,\,\,\,
+(x &gt; \delta) \,\,\,\,\,\,\,\, |f(x)| &gt; \varepsilon\]</span>
+Обозначается: <span class="math inline">\(\displaystyle \lim_{x\to
+x_0}f(x) = \infty\)</span></p>
+<p><strong>Определение:</strong><a name="definition-3"></a> <span
+class="math inline">\(f(x)\)</span> - бесконечно малая (функция) при
+<span class="math inline">\(x \to x_0 \,\,\,\, (x \to \infty)\)</span>,
+если <span class="math inline">\(\displaystyle \lim_{x\to x_0}f(x) = 0
+\,\,\,\, (\displaystyle \lim_{x\to \infty}f(x) = 0)\)</span>
+Обозначается: <span
+class="math inline">\(\overline{\overline{o}}(1)\)</span>, при <span
+class="math inline">\(x \to x_0\)</span></p>
+<p><strong>Теорема:</strong><a name="theorem-1"></a> Пусть <span
+class="math inline">\(f(x)\)</span> - бесконечно большая при <span
+class="math inline">\(x \to x_0\)</span>. Тогда <span
+class="math inline">\(\frac{1}{f(x)}\)</span> - бесконечно малая при
+<span class="math inline">\(x \to x_0\)</span>.</p>
+<p><em>Доказательство:</em> <span class="math inline">\(\forall
+\varepsilon &gt; 0 \,\,\,\, \exists \delta &gt; 0: \forall x \in
+\mathring{B}_{\delta}(x_0) \,\,\,\, (x &gt; \delta) \,\,\,\,\,\,\,\,
+|f(x)| &gt; \varepsilon \Rightarrow \frac{1}{f(x)} &lt;
+\frac{1}{\varepsilon} \,\,\,\,\blacksquare\)</span></p>
+<p><strong>Теорема:</strong><a name="theorem-2"></a> <span
+class="math inline">\(\displaystyle \lim_{x\to x_0}f(x) = a
+\Leftrightarrow f(x) - a = \bar{\bar{o}}(1)\)</span>, при <span
+class="math inline">\(x \to x_0\)</span></p>
+<p><em>Доказательство:</em> <span class="math inline">\(\forall
+\varepsilon &gt; 0 \,\,\,\, \exists \delta &gt; 0: \,\,\,\, \forall x
+\in \mathring{B}_{\delta}(x_0) \,\,\,\, |f(x)| \in B_{\varepsilon}(a)
+\Rightarrow\)</span></p>
+<p><span class="math inline">\(\forall \varepsilon &gt; 0 \,\,\,\,
+\exists \delta &gt; 0: \,\,\,\, \forall x \in \mathring{B}_{\delta}(x_0)
+\,\,\,\, |(f(x) - a) - 0| &lt; \varepsilon
+\,\,\,\,\blacksquare\)</span></p>
+<p><strong>Теорема:</strong><a name="theorem-3"></a> Пусть <span
+class="math inline">\(f(x) = \overline{\overline{o}}(1), \,\,\,\, g(x) =
+\overline{\overline{o}}(1), \,\,\,\, h(x) =
+\underline{\underline{O}}(1)\)</span>, при <span class="math inline">\(x
+\to x_0\)</span>. Тогда:</p>
+<ol type="1">
+<li><span class="math display">\[f(x) \cdot g(x) =
+\overline{\overline{o}}(1)\]</span></li>
+<li><span class="math display">\[\alpha f(x) + \beta g(x) =
+\overline{\overline{o}}(1)\]</span></li>
+<li><span class="math display">\[f(x) \cdot h(x) =
+\overline{\overline{o}}(1)\]</span></li>
+</ol>
+<p><em>Доказательство:</em></p>
+<ol type="1">
+<li><span class="math inline">\(f(x) = \overline{\overline{o}}
+\Rightarrow \forall \displaystyle \{x_n\}_{n = 1}^{\infty}: \left(
+\forall n \,\,\,\, x_n \ne x_0 \,\,\,\, \exists \displaystyle \lim_{n\to
+\infty}x_n = x_0 \right)\,\,\,\,\,\,\,\, \exists \displaystyle
+\lim_{n\to \infty}f(x_n) = 0\)</span> <span class="math inline">\(g(x) =
+\overline{\overline{o}} \Rightarrow \forall \displaystyle \{x_n’\}_{n =
+1}^{\infty}: \left( \forall n \,\,\,\, x_n’ \ne x_0 \,\,\,\, \exists
+\displaystyle \lim_{n\to \infty}x_n’ = x_0 \right)\,\,\,\,\,\,\,\,
+\exists \displaystyle \lim_{n\to \infty}g(x_n’) = 0\)</span> Условия на
+последовательности <span class="math inline">\(x_n\)</span> и <span
+class="math inline">\(x_n’\)</span> совпадают <span
+class="math inline">\(\Rightarrow\)</span> множество
+последовательностей, удовлетворяющих этим условиям совпадают. А значит
+<span class="math inline">\(\forall \displaystyle \{x_n\}_{n =
+1}^{\infty}: \left( \forall n \,\,\,\, x_n \ne x_0 \,\,\,\, \exists
+\displaystyle \lim_{n\to \infty}x_n = x_0 \right)\,\,\,\,\,\,\,\,
+\exists \displaystyle \lim_{n\to \infty}f(x_n) \cdot g(x_n) = 0
+\,\,\,\,\blacksquare\)</span></li>
+<li></li>
+<li><span class="math inline">\(f(x) = \overline{\overline{o}}(1)
+\Rightarrow \displaystyle \lim_{x\to x_0}f(x) = 0 \Rightarrow \forall
+\varepsilon &gt; 0 \,\,\,\, \exists \delta &gt; 0: \,\,\,\, \forall x:
+\,\,\,\, 0 &lt; |x - x_0| &lt; \delta \,\,\,\, |f(x)| &lt;
+\varepsilon\)</span> <span class="math inline">\(h(x) =
+\underline{\underline{O}}(1) \Rightarrow \exists C &gt; 0:
+\,\,\,\,|h(x)| &lt; C\)</span></li>
+</ol>
+<p><strong>Теорема:</strong><a name="theorem-4"></a> Пусть <span
+class="math inline">\(\displaystyle \lim_{x\to x_0}f(x) = a \ne
+0\)</span>. Тогда <span class="math inline">\(\exists
+\mathring{B}_{\delta}(x_0): \,\,\,\, \frac{1}{f(x)} =
+\underline{\underline{O}}(1)\)</span></p>
+<p><em>Доказательство:</em> Перепишу доказательство из конспекта. Ничего
+не понятно :( а ладно, может и понятно. не понятно все-таки.</p>
+<p><span class="math inline">\(\exists
+\mathring{B}_{\delta}(x_0)\)</span>, в которой <span
+class="math inline">\(f(x)\)</span> ограничена по <a
+href="#theorem-8">теореме</a> <span class="math inline">\(\Rightarrow
+\exists \sup_\limits{x \in \mathring{B}_{\delta}(x_0)} f(x)\)</span> и
+<span class="math inline">\(\exists \inf_\limits{x \in
+\mathring{B}_{\delta}(x_0)} f(x) \Rightarrow \frac{1}{|f(x)|} \le
+\max\{\frac{1}{|\sup f|};\frac{1}{|\inf f|}\}
+\,\,\,\,\blacksquare\)</span></p>
+<p><strong>Теорема:</strong><a name="theorem-5"></a> Пусть <span
+class="math inline">\(\displaystyle \lim_{x\to x_0}f(x) = a\)</span> и
+<span class="math inline">\(\displaystyle \lim_{x\to x_0}g(x) =
+b\)</span>. Тогда</p>
+<ol type="1">
+<li><span class="math inline">\(\exists \displaystyle \lim_{x\to
+x_0}\alpha f(x) + \beta g(x) = \alpha a + \beta b\)</span></li>
+<li><span class="math inline">\(\exists \displaystyle \lim_{x\to
+x_0}f(x)\cdot g(x) = a \cdot b\)</span></li>
+<li>Если <span class="math inline">\(b \ne 0\)</span>, то <span
+class="math inline">\(\exists \displaystyle \lim_{x\to
+x_0}\frac{f(x)}{g(x)} = \frac{a}{b}\)</span></li>
+</ol>
+<p><em>Доказательство:</em> следует из доказанного выше.</p>
+<p><strong>Теорема:</strong><a name="theorem-6"></a> <span
+class="math display">\[\exists \displaystyle \lim_{x\to x_0}f(x) = a
+\Leftrightarrow \exists \displaystyle \lim_{x\to x_0+0}f(x) = a \,\,\,\,
+и \,\,\,\,\exists \displaystyle \lim_{x\to x_0-0}f(x) = a\]</span></p>
+<p><em>Доказательство:</em> записать определение.</p>
+<p><strong>Теорема:</strong><a name="theorem-11"></a> (Критерий Коши
+существования предела) <span class="math display">\[\exists
+\displaystyle \lim_{x\to x_0}f(x) = a \Leftrightarrow \forall
+\varepsilon &gt; 0 \,\,\,\, \exists \delta &gt; 0: \,\,\,\, \forall x_1,
+x_2 \in \mathring{B}_{\delta}(x_0) \,\,\,\, |f(x_1) - f(x_2)| &lt;
+\varepsilon\]</span></p>
+<p><em>Доказательство:</em> <span class="math inline">\(\Rightarrow
+\,\,\,\, |f(x_1) - f(x_2)| = |f(x_1) - a - (f(x_2) - a)| \le |f(x_1) -
+a| + |f(x_2) - a| &lt; 2 \varepsilon \,\,\,\,\blacksquare\)</span> <span
+class="math inline">\(\Leftarrow \,\,\,\, ????\)</span></p>
+<h2
+id="монотонные-функции-теорема-о-пределе-монотонной-и-ограниченной-функции">Монотонные
+функции, теорема о пределе монотонной и ограниченной функции</h2>
+<hr />
+<p><strong>Определение:</strong><a name="definition-7"></a> Пусть <span
+class="math inline">\(f(x)\)</span> определена на <span
+class="math inline">\((a, b)\)</span> и <span
+class="math inline">\(\forall x_1 &lt; x_2 \in (a, b):\)</span></p>
+<ol type="1">
+<li><span class="math inline">\(f(x_1) &lt; f(x_2)\)</span> - функция
+<span class="math inline">\(f(x)\)</span> возрастающая на <span
+class="math inline">\((a, b)\)</span></li>
+<li><span class="math inline">\(f(x_1) \le f(x_2)\)</span> - функция
+<span class="math inline">\(f(x)\)</span> неубывающая на <span
+class="math inline">\((a, b)\)</span></li>
+<li><span class="math inline">\(f(x_1) \ge f(x_2)\)</span> - функция
+<span class="math inline">\(f(x)\)</span> невозрастающая на <span
+class="math inline">\((a, b)\)</span></li>
+<li><span class="math inline">\(f(x_1) &gt; f(x_2)\)</span> - функция
+<span class="math inline">\(f(x)\)</span> убывающая на <span
+class="math inline">\((a, b)\)</span></li>
+</ol>
+<p><strong>Теорема:</strong><a name="theorem-12"></a> Пусть <span
+class="math inline">\(\forall x \in \mathring{B}_{\delta}(x_0) \,\,\,\,
+f(x) \ge g(x)\)</span> и <span class="math inline">\(\exists
+\displaystyle \lim_{x\to x_0}f(x) = a, \,\,\,\,\exists \displaystyle
+\lim_{x\to x_0}g(x) = b\)</span>. Тогда</p>
+<ol type="1">
+<li><span class="math inline">\(a \ge b\)</span></li>
+<li>Если <span class="math inline">\(a &gt; b\)</span>, то <span
+class="math inline">\(\exists \mathring{B}_{\delta_1}(x_0):\,\,\,\, f(x)
+&gt; g(x) \,\,\,\, \forall x \in
+\mathring{B}_{\delta_1}(x_0)\)</span></li>
+</ol>
+<p><em>Доказательство:</em> 1. Гейне. 2. Определение для <span
+class="math inline">\(\varepsilon = \frac{|a - b|}{3}\)</span></p>
+<p><strong>Теорема:</strong><a name="theorem-13"></a> Пусть <span
+class="math inline">\(\displaystyle \lim_{x\to x_0}f(x) = \displaystyle
+\lim_{x\to x_0}g(x) = a\)</span> и <span class="math inline">\(f(x) \le
+h(x) \le g(x) \,\,\,\, \forall x \in
+\mathring{B}_{\delta}(x_0)\)</span>. Тогда <span
+class="math inline">\(\displaystyle \lim_{x\to x_0}h(x) =
+a\)</span>.</p>
+<p><em>Доказательство:</em> Гейне.</p>
+<p><strong>Теорема:</strong><a name="theorem-14"></a> Пусть <span
+class="math inline">\(f(x)\)</span> неубывает и ограничена сверху в
+<span class="math inline">\((x_0 - \delta, x_0)\)</span>. Тогда <span
+class="math inline">\(\exists \displaystyle \lim_{x\to
+x_0-0}f(x)\)</span>.</p>
+<p><em>Доказательство:</em> <span class="math inline">\(f(x)\)</span>
+ограничена сверху <span class="math inline">\(\Rightarrow \exists \sup
+(f(x)) = \alpha \,\,\,\, \forall \varepsilon &gt; 0 \,\,\,\,\exists
+x_{\varepsilon} \in (x_0 - \delta, x_0): \,\,\,\, f(x_{\varepsilon})
+&gt; \alpha - \varepsilon \Rightarrow\)</span>, т.к. функция <span
+class="math inline">\(f(x)\)</span> неубывает <span
+class="math inline">\(\forall x &gt; x_{\varepsilon} \,\,\,\, x &gt;
+\alpha - \varepsilon ????\)</span></p>
+<h2
+id="непрерывные-функции-локальные-свойства-непрерывных-функций.-точки-разрыва-их-классификация">Непрерывные
+функции, локальные свойства непрерывных функций. Точки разрыва, их
+классификация</h2>
+<hr />
+<p><strong>Определение:</strong><a name="definition-8"></a> Функция
+<span class="math inline">\(f(x)\)</span> непрерывна в т. <span
+class="math inline">\(x_0\)</span>, если <span
+class="math inline">\(f(x)\)</span> определена в т. <span
+class="math inline">\(x_0\)</span> и <span
+class="math inline">\(\displaystyle \lim_{x\to x_0}f(x) =
+f(x_0)\)</span></p>
+<p><strong>Упражнение:</strong><a name="exercise-0"></a> Найдите пять
+отличий с определением предела и придумайте определение непрерывности
+“по Гейне”.</p>
+<p><strong>Теорема:</strong><a name="theorem-15"></a> Пусть <span
+class="math inline">\(f(x), g(x)\)</span> непрерывны в т. <span
+class="math inline">\(x_0\)</span>. Тогда <span
+class="math inline">\(\forall \alpha, \beta \in \mathbb{R}\)</span></p>
+<ol type="1">
+<li><span class="math inline">\(\alpha f(x) + \beta g(x)\)</span> -
+непрерывна в точке <span class="math inline">\(x_0\)</span>.</li>
+<li><span class="math inline">\(f(x)\cdot g(x)\)</span> - непрерывна в
+точке <span class="math inline">\(x_0\)</span>.</li>
+<li>Если <span class="math inline">\(g(x_0) \ne 0\)</span>, то <span
+class="math inline">\(\frac{f(x)}{g(x)}\)</span> - непрерывна в точке
+<span class="math inline">\(x_0\)</span>.</li>
+</ol>
+<p><em>Доказательство:</em> Пределы.</p>
+<p><strong>Теорема:</strong><a name="theorem-16"></a> (Непрерывность
+композиции) Пусть <span class="math inline">\(f(x)\)</span> непрерывна в
+т. <span class="math inline">\(x_0\)</span>, <span
+class="math inline">\(y_0 = f(x_0), \,\,\,\, g(y)\)</span> непрерывна в
+т. <span class="math inline">\(y_0\)</span>. Тогда <span
+class="math inline">\(g(f(x))\)</span> непрерывна в т. <span
+class="math inline">\(x_0\)</span>.</p>
+<p><em>Доказательство:</em> Гейне ????.</p>
+<p><strong>Определение:</strong><a name="definition-9"></a> Пусть <span
+class="math inline">\(f(x)\)</span> определена в <span
+class="math inline">\(B(x_0)\)</span> и <span
+class="math inline">\(f(x)\)</span> не является непрерывной в т. <span
+class="math inline">\(x_0\)</span>. Тогда <span
+class="math inline">\(x_0\)</span> <em>точка разрыва</em> функции <span
+class="math inline">\(f(x)\)</span>.</p>
+<p><strong>Определение:</strong><a name="definition-10"></a>
+(Классификация точек разрыва) Пусть <span
+class="math inline">\(x_0\)</span> точка разрыва функции <span
+class="math inline">\(f(x)\)</span></p>
+<ol type="1">
+<li>Если <span class="math inline">\(\exists \displaystyle \lim_{x\to
+x_0+0}f(x)\)</span> и <span class="math inline">\(\exists \displaystyle
+\lim_{x\to x_0-0}f(x)\)</span> и</li>
+</ol>
+<ol type="a">
+<li><span class="math inline">\(\displaystyle \lim_{x\to x_0+0}f(x) =
+\displaystyle \lim_{x\to x_0-0}f(x)\)</span>, то <span
+class="math inline">\(x_0\)</span> точка <em>устранимого</em>
+разрыва.</li>
+<li><span class="math inline">\(\displaystyle \lim_{x\to x_0+0}f(x) \ne
+\displaystyle \lim_{x\to x_0-0}f(x)\)</span>, то <span
+class="math inline">\(x_0\)</span> точка разрыва <em>первого
+рода</em>.</li>
+</ol>
+<ol start="2" type="1">
+<li>Если <span class="math inline">\(\not\exists \displaystyle
+\lim_{x\to x_0+0}f(x)\)</span> и <span class="math inline">\(\nexists
+\displaystyle \lim_{x\to x_0-0}f(x)\)</span>, то <span
+class="math inline">\(x_0\)</span> точка разрыва <em>второго
+рода</em>.</li>
+</ol>
+<p><strong>Замечание:</strong> Если предел равен <span
+class="math inline">\(\pm \infty\)</span>, то его не сущесвует.</p>
+<h2 id="глобальные-свойства-непрерывных-функций">Глобальные свойства
+непрерывных функций</h2>
+<hr />
+<p><strong>Определение:</strong><a name="definition-11"></a> Если
+функция <span class="math inline">\(f(x)\)</span> непрерывна в каждой
+точке множества <span class="math inline">\(A \subset
+\mathbb{R}\)</span>, то пишут <span class="math inline">\(f \in
+C(A)\)</span>.</p>
+<p><strong>Теорема:</strong><a name="theorem-17"></a> (1-я теорема
+Вейерштрасса) Пусть <span class="math inline">\(f(x) \in C[a,
+b]\)</span> (непрерывна на отрезке). Тогда <span
+class="math inline">\(f(x)\)</span> ограничена на отрезке <span
+class="math inline">\([a, b]\)</span>.</p>
+<p><em>Доказательство:</em> (От противного) Пусть <span
+class="math inline">\(f(x)\)</span> не ограничена на <span
+class="math inline">\([a, b]\)</span>, т.е. <span
+class="math inline">\(\forall M &gt; 0 \,\,\,\, \exists x_M \in [a, b]:
+\,\,\,\, |f(x_M)| &gt; M\)</span>. Рассмотрим последовательность <span
+class="math inline">\(\{x_n\}_{n = 1}^{\infty}\)</span>: <span
+class="math inline">\(|f(x_1)| &gt; 1, \,\,\,\, |f(x_2)| &gt; 2,
+\,\,\,\,\ldots \,\,\,\,\,\,\,\, \forall n \,\,\,\, x_n \in [a, b]
+\Rightarrow\)</span> последовательность ограничена <span
+class="math inline">\(\Rightarrow\)</span> существует сходящаяся
+подпоследовательность <span class="math inline">\(\{x_{n_k}\}_{k =
+1}^{\infty}\)</span>. Пусть <span class="math inline">\(\displaystyle
+\lim_{k \to \infty}x_{n_k} = x_0\)</span>. А так как <span
+class="math inline">\(f(x)\)</span> непрерывна на <span
+class="math inline">\([a, b]\)</span> и <span class="math inline">\(x_0
+\in [a, b]\)</span>(Почему?) <span class="math inline">\(\exists
+\displaystyle \lim_{x\to x_0}f(x_{n_k}) = f(x_0)\)</span>, что
+противоречит <span class="math inline">\(|f(x_{n_k})| &gt; n_k \,\,\,\,
+\forall k\)</span>(Где противоречие?).</p>
+<p><strong>Теорема:</strong><a name="theorem-18"></a> (2-я теорема
+Вейерштрасса) Если <span class="math inline">\(f(x) \in C[a,
+b]\)</span>, то <span class="math inline">\(\exists \min f(x)\)</span> и
+<span class="math inline">\(\max f(x)\)</span> на <span
+class="math inline">\([a, b]\)</span>.</p>
+<p><em>Доказательство:</em> По <a href="#theorem-17">1-й теореме
+Вейерштрасса</a> <span class="math inline">\(f(x)\)</span> ограничена, а
+значит <span class="math inline">\(\exists \sup \limits_{x \in [a,
+b]}f(x) = \alpha\)</span>. Хочется доказать, что <span
+class="math inline">\(\alpha \in [a, b]\)</span>. <br> <span
+class="math inline">\(\alpha\)</span> - точная верхняя грань,
+следовательно <span class="math inline">\(\exists x_1 \in [a, b]:
+\,\,\,\, f(x_1) &gt; \alpha - 1, \,\,\,\,\ldots, \,\,\,\, \exists x_n
+\in [a, b]: \,\,\,\, f(x_n) &gt; \alpha - \frac{1}{n},
+\,\,\,\,\ldots\)</span> <span class="math inline">\(x_n \in [a, b]
+\,\,\,\,\forall n \Rightarrow \{x_n\}\)</span> - ограничена на <span
+class="math inline">\([a, b]\)</span>. Значит <span
+class="math inline">\(\exists \{x_{n_k}\}: \,\,\,\, \exists
+\displaystyle \lim_{k\to \infty}x_{n_k} = x_m \in [a,
+b]\)</span>(почему?). <span class="math inline">\(\,\,\,\,\alpha -
+\frac{1}{n_k} &lt; f(x_{n_k}) \le \alpha \Rightarrow \displaystyle
+\lim_{k\to \infty}f(x_{n_k}) = \alpha\)</span>, а также, так как <span
+class="math inline">\(f(x)\)</span> непрерывна на <span
+class="math inline">\([a, b]\)</span>, <span
+class="math inline">\(\displaystyle \lim_{k \to \infty}f(x_{n_k}) =
+f(x_m) \,\,\,\,\blacksquare\)</span></p>
+<p><strong>Теорема:</strong><a name="theorem-19"></a> (О промежуточных
+значениях) Пусть <span class="math inline">\(f(x) \in C[a, b], \,\,\,\,
+A = f(a), \,\,\,\, B = f(b)\)</span>. Пусть для определенности <span
+class="math inline">\(A \le B\)</span>. Тогда <span
+class="math inline">\(\forall C: A \le C \le B \,\,\,\, \exists c \in
+[a, b]: C = f(c)\)</span>.</p>
+<p><em>Доказательство:</em> Пусть <span class="math inline">\(C = 0,
+\,\,\,\, A \le 0, \,\,\,\, B \ge 0\)</span>.(В остальных случаях
+достаточно рассмотреть <span class="math inline">\(f_1(x) = f(x) -
+C\)</span>) Рассмотрим последовательность вложенных отрезков <span
+class="math inline">\(a_1 = a, \,\,\,\, b_1 = b,\,\,\,\, [a_{n+1},
+b_{n+1}] = \begin{cases}  [\frac{a_n + b_n}{2}, b_n], &amp;\text{ если
+}\frac{a_n + b_n}{2} \le 0\\  [a_n, \frac{a_n + b_n}{2}], &amp;\text{
+если }\frac{a_n + b_n}{2} &gt; 0 \end{cases}\)</span>. По принципу
+полноты Кантора <span class="math inline">\(\exists c: \forall n
+\,\,\,\, a_n \le c \le b_n, \,\,\,\, a_n \to c, \,\,\,\, b_n \to
+c\)</span>(почему?). Так как <span class="math inline">\(f(x)\)</span>
+непрерывна на <span class="math inline">\([a, b]\)</span> и <span
+class="math inline">\(\forall n: f(a_n) \le 0 \,\,\,\,\,\,\,\, \exists
+\displaystyle \lim_{n\to \infty}f(a_n) \le 0\)</span>. Аналогично <span
+class="math inline">\(\exists \displaystyle \lim_{n\to \infty}f(b_n) \ge
+0 \Rightarrow \displaystyle \lim_{n\to \infty}f(a_n) = \displaystyle
+\lim_{n\to \infty}f(b_n) = 0 = f(c) = C
+\,\,\,\,\blacksquare\)</span></p>
+<h2
+id="теорема-о-разрывах-монотонной-функции-теорема-о-обратной-функции-к-непрерывной-и-монотонной">Теорема
+о разрывах монотонной функции Теорема о обратной функции к непрерывной и
+монотонной</h2>
+<hr />
+<p><strong>Теорема:</strong><a name="theorem-20"></a> Пусть <span
+class="math inline">\(f(x)\)</span> - монотонно возрастает. Тогда <span
+class="math inline">\(f(x)\)</span> может иметь разрывы только первого
+рода.</p>
+<p><em>Доказательство:</em> Какая-то тут лажа.</p>
+<p><strong>Теорема:</strong><a name="theorem-21"></a> Пусть <span
+class="math inline">\(y = f(x)\)</span> непрерывна и строго возрастает
+на <span class="math inline">\([a, b]\)</span>. Тогда <span
+class="math inline">\(\exists x = f^{-1}(y)\)</span> непрерывная и
+строго возрастающая на <span class="math inline">\([f(a),
+f(b)]\)</span>.</p>
+<p><em>Доказательство:</em> <span class="math inline">\(f(x)\)</span>
+непрерывна на <span class="math inline">\([a, b] \Rightarrow \forall C:
+f(a) \le C \le f(b) \,\,\,\, \exists c: f(c) = C\)</span> по <a
+href="#theorem-19">теореме</a>. Так как функция строго возрастает, такое
+<span class="math inline">\(c\)</span> единственно для каждого <span
+class="math inline">\(C\)</span>. А значит <span
+class="math inline">\(\exists x = f^{-1}(y)\)</span>. Докажем, что <span
+class="math inline">\(f^{-1}(y)\)</span> строго возрастает. <span
+class="math inline">\(\forall x_1, x_2 \in [a, b]: x_1 &lt; x_2 \,\,\,\,
+f(x_1) &lt; f(x_2) \Rightarrow \forall y_1, y_2 \in [f(a), f(b)]: y_1
+&lt; y_2 \,\,\,\, f^{-1}(x_1) &lt; f^{-1}(x_2)\)</span>. Докажем от
+противного, что <span class="math inline">\(f^{-1}(y)\)</span>
+непрерывна на <span class="math inline">\([f(a), f(b)]\)</span>. Пусть
+<span class="math inline">\(f^{-1}(y)\)</span> не является непрерывной
+на <span class="math inline">\([f(a), f(b)]\)</span>. По <a
+href="#theorem-20">теореме</a> у <span
+class="math inline">\(f^{-1}(y)\)</span> могут быть только <a
+href="#definition-10">разрывы первого рода</a>. Значит на <span
+class="math inline">\([f^{-1}(f(a)), f^{-1}(f(b))]\)</span> существует
+интервал, в котором не существует значений <span
+class="math inline">\(f^{-1}(y)\)</span>. Но <span
+class="math inline">\(\forall x \in [a, b]: \exists y = f(x) \Rightarrow
+\exists x = f^{-1}(y) \,\,\,\,\blacksquare\)</span></p>
+<h2 id="равномерно-непрерывные-функции-теорема-кантора">Равномерно
+непрерывные функции, теорема Кантора</h2>
+<hr />
+<p><strong>Определение:</strong><a name="definition-12"></a> Пусть <span
+class="math inline">\(I \subset \mathbb{R}\)</span> - промежуток. Если
+<span class="math inline">\(\forall \varepsilon &gt; 0 \,\,\,\, \exists
+\delta &gt; 0: \forall x_1, x_2 \in I: |x_1 - x_2| &lt; \delta \,\,\,\,
+|f(x_1) - f(x_2)| &lt; \varepsilon\)</span>, то <span
+class="math inline">\(f(x)\)</span> - <em>равномерно непрерыва</em> на
+<span class="math inline">\(I\)</span>.</p>
+<p><strong>Теорема:</strong><a name="theorem-22"></a> Если <span
+class="math inline">\(f(x)\)</span> непрерывна на <span
+class="math inline">\([a, b]\)</span>, то <span
+class="math inline">\(f(x)\)</span> равномерно непрерывна на <span
+class="math inline">\([a, b]\)</span>.</p>
+<p><em>Доказательство:</em> (От противного) Пусть <span
+class="math inline">\(f(x)\)</span> не является равномерно непрерывной
+на <span class="math inline">\([a, b]\)</span>, то есть <span
+class="math inline">\(\exists \varepsilon_0 &gt; 0: \forall \delta &gt;
+0 \,\,\,\,\exists x’, x’’ \in [a, b], \,\,\,\, |x’ - x’’| &lt; \delta:
+\,\,\,\, |f(x’) - f(x’’)| \ge \varepsilon_0\)</span>. Построим
+последовательность: <span class="math display">\[x_1’, x_1’’ \in [a, b],
+\,\,\,\, |x_1’ - x_1’’| &lt; 1: \,\,\,\, |f(x_1’) - f(x_1’’)| \ge
+\varepsilon_0\]</span> <span class="math display">\[x_2’, x_2’’ \in [a,
+b], \,\,\,\, |x_2’ - x_2’’| &lt; \frac{1}{2}: \,\,\,\, |f(x_2’) -
+f(x_2’’)| \ge \varepsilon_0\]</span> <span
+class="math display">\[\vdots\]</span> <span
+class="math display">\[x_n’, x_n’’ \in [a, b], \,\,\,\, |x_n’ - x_n’’|
+&lt; \frac{1}{n}: \,\,\,\, |f(x_n’) - f(x_n’’)| \ge
+\varepsilon_0\]</span> <span class="math display">\[\vdots\]</span>
+<span class="math inline">\(\{x_n’\} \subset [a, b] \Rightarrow \exists
+\{x_{n_k}\}: \,\,\,\, \exists \displaystyle \lim_{k\to \infty}x_{n_k} =
+x_0\)</span>. <span class="math inline">\(|x_{n_k}’ - x_{n_k}’’| &lt;
+\frac{1}{n_k} \Rightarrow \displaystyle \lim_{k\to \infty}x_{n_k}’’ =
+x_0\)</span>(Почему?). Так как <span class="math inline">\(f(x)\)</span>
+непрерывна на <span class="math inline">\([a, b] \,\,\,\, \exists
+\displaystyle \lim_{k\to \infty}f(x_{n_k}’) = f(x_0)\)</span> и <span
+class="math inline">\(\exists \displaystyle \lim_{k\to
+\infty}f(x_{n_k}’’) = f(x_0)\)</span>. Но <span
+class="math inline">\(|f(x_{n_k}’) - f(x_{n_k}’’)| \ge
+\varepsilon_0\)</span>. Противоречие(Где?) <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<h2
+id="построение-показательной-функции.-логарифм-степенная-функция-синус-и-косинус">Построение
+показательной функции. Логарифм, степенная функция, синус и косинус</h2>
+<hr />
+<h2 id="замечательные-пределы-следствия-из-них">Замечательные пределы,
+следствия из них</h2>
+<hr />
+<p><strong>Теорема:</strong><a name="theorem-23"></a> (Первый
+замечательный предел) <span class="math display">\[\exists \displaystyle
+\lim_{x\to 0}\frac{\sin(x)}{x} = 1\]</span></p>
+<p><strong>Теорема:</strong><a name="theorem-24"></a> <span
+class="math display">\[\exists \displaystyle \lim_{x\to \infty} \left(1+
+\frac{1}{x}\right)^x = e\]</span></p>
+<p><strong>Следствие:</strong><a name="corollary-0"></a> <span
+class="math display">\[\displaystyle \lim_{x\to 0}(1+x)^{\frac{1}{x}} =
+e\]</span></p>
+<p><em>Доказательство:</em> очев <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><strong>Следствие:</strong><a name="corollary-1"></a> <span
+class="math display">\[\displaystyle \lim_{x\to 0}\frac{\ln(1 + x)}{x} =
+1\]</span></p>
+<p><em>Доказательство:</em> <span class="math inline">\(\displaystyle
+\lim_{x\to 0}\frac{\ln(1 + x)}{x} = \displaystyle \lim_{x\to 0}\ln((1 +
+x)^{\frac{1}{x}}) = \ln(e) = 1 \,\,\,\,\blacksquare\)</span></p>
+<p><strong>Следствие:</strong><a name="corollary-2"></a> <span
+class="math display">\[\displaystyle \lim_{x\to 0}\frac{e^x - 1}{x} =
+1\]</span></p>
+<p><em>Доказательство:</em> Пусть <span class="math inline">\(t = e^x -
+1\)</span>. Тогда <span class="math inline">\(\displaystyle \lim_{x\to
+0}\frac{e^x - 1}{x} = \displaystyle \lim_{t\to 0}\frac{t}{\ln(t + 1)} =
+1 \,\,\,\,\blacksquare\)</span></p>
+<h2
+id="производная-функции-производная-по-множеству.-производная-суммы-произведения-и-отношения-функций">Производная
+функции, производная по множеству. Производная суммы, произведения и
+отношения функций</h2>
+<hr />
+<p><strong>Определение:</strong><a name="definition-13"></a> Пусть <span
+class="math inline">\(f(x)\)</span> определена в <span
+class="math inline">\(B(x_0), \,\,\,\, \Delta x = x - x_0\)</span>. Если
+<span class="math display">\[\exists \displaystyle \lim_{\Delta x\to
+0}\frac{f(x + \Delta x) - f(x)}{\Delta x} = f’(x_0),\]</span> то <span
+class="math inline">\(f(x)\)</span> имеет производную <span
+class="math inline">\(f’(x_0)\)</span> в т. <span
+class="math inline">\(x_0\)</span>.</p>
+<p><strong>Определение:</strong><a name="definition-14"></a> Пусть <span
+class="math inline">\(A \subset \mathbb{R}, \,\,\,\, \Delta x = x -
+x_0\)</span>. Если <span class="math display">\[\exists \displaystyle
+\lim_{\Delta x\to 0, \Delta x + x_0 \in A}\frac{f(x + \Delta x) -
+f(x)}{\Delta x} = f’(x_0),\]</span> то <span
+class="math inline">\(f(x)\)</span> имеет производную <span
+class="math inline">\(f’(x_0)\)</span> по множеству <span
+class="math inline">\(A\)</span> в т. <span
+class="math inline">\(x_0\)</span>.</p>
+<p><strong>Обозначение:</strong> <span
+class="math inline">\(\displaystyle \lim_{\Delta x\to 0, \Delta x &lt;
+0}\frac{f(x + \Delta x) - f(x)}{\Delta x} \stackrel{def}{=} f’_{-}(x_0)
+\stackrel{def}{=} f’(x_0 - 0)\)</span></p>
+<p><strong>Обозначение:</strong> <span
+class="math inline">\(\displaystyle \lim_{\Delta x\to 0, \Delta x &gt;
+0}\frac{f(x + \Delta x) - f(x)}{\Delta x} \stackrel{def}{=} f’_{+}(x_0)
+\stackrel{def}{=} f’(x_0 + 0)\)</span></p>
+<p><strong>Теорема:</strong><a name="theorem-25"></a> Пусть <span
+class="math inline">\(f(x)\)</span> имеет производную <span
+class="math inline">\(f’(x_0)\)</span> в т. <span
+class="math inline">\(x_0\)</span>. Тогда <span
+class="math inline">\(f(x)\)</span> непрерывна в т. <span
+class="math inline">\(x_0\)</span>.</p>
+<p><em>Доказательство:</em> <span class="math inline">\(\displaystyle
+\lim_{x\to x_0}(f(x) - f(x_0)) = \displaystyle \lim_{x\to x_0}\frac{f(x)
+- f(x_0)}{x - x_0}\cdot(x - x_0) = f’(x_0)\cdot 0 = 0\)</span>. А значит
+по <a href="#theorem-2">теореме</a> <span
+class="math inline">\(f(x)\)</span> непрерывна в т. <span
+class="math inline">\(x_0 \,\,\,\,\blacksquare\)</span></p>
+<p><strong>Теорема:</strong><a name="theorem-26"></a> Пусть <span
+class="math inline">\(\exists f’(x_0)\)</span> и <span
+class="math inline">\(\exists g’(x_0)\)</span>. Тогда <span
+class="math display">\[\exists (f(x) + g(x))’_{|x = x_0} = f’(x_0) +
+g’(x_0)\]</span></p>
+<p><em>Доказательство:</em> очев <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><strong>Теорема:</strong><a name="theorem-27"></a> Пусть <span
+class="math inline">\(\exists f’(x_0)\)</span> и <span
+class="math inline">\(\exists g’(x_0)\)</span>. Тогда <span
+class="math display">\[\exists (f(x) \cdot g(x))’_{|x = x_0} =
+f’(x_0)\cdot g(x_0) + g’(x_0) \cdot f(x_0)\]</span></p>
+<p><em>Доказательство:</em> <span class="math display">\[\displaystyle
+\lim_{\Delta x\to 0}\frac{f(x + \Delta x) \cdot g(x + \Delta x) -
+f(x)\cdot g(x)}{\Delta x} =\]</span> <span
+class="math display">\[=\displaystyle \lim_{\Delta x\to 0}\frac{f(x +
+\Delta x) \cdot g(x + \Delta x) - g(x + \Delta x) \cdot f(x) - f(x)\cdot
+g(x) + g(x + \Delta x) \cdot f(x)}{\Delta x} =\]</span> <span
+class="math display">\[=\displaystyle \lim_{\Delta x\to 0}\frac{g(x +
+\Delta x)\cdot (f(x + \Delta x) - f(x)) + f(x)\cdot (g(x + \Delta x) -
+g(x))}{\Delta x} =\]</span> <span class="math display">\[=\displaystyle
+\lim_{\Delta x\to 0}\frac{g(x + \Delta x)\cdot (f(x + \Delta x) -
+f(x))}{\Delta x} + \frac{f(x)\cdot (g(x + \Delta x) - g(x))}{\Delta x}
+=\]</span> <span class="math display">\[=f’(x_0)\cdot g(x_0) + g’(x_0)
+\cdot f(x_0) \,\,\,\,\blacksquare\]</span></p>
+<p><strong>Теорема:</strong><a name="theorem-28"></a> Пусть <span
+class="math inline">\(\exists f’(x_0)\)</span> и <span
+class="math inline">\(\exists g’(x_0)\)</span>. Тогда <span
+class="math display">\[\exists \left( \frac{f(x)}{g(x)}\right)’_{|x =
+x_0} = \frac{f’(x_0)\cdot g(x_0) - g’(x_0) \cdot
+f(x_0)}{g(x_0)^2}\]</span></p>
+<p><em>Доказательство:</em> <span class="math display">\[\left(
+\frac{f(x)}{g(x)}\right)’_{|x = x_0} =\]</span> <span
+class="math display">\[\displaystyle \lim_{\Delta x\to 0}\frac{\frac{f(x
++ \Delta x)}{g(x + \Delta x)} - \frac{f(x)}{g(x)}}{\Delta x} =\]</span>
+<span class="math display">\[\displaystyle \lim_{\Delta x\to 0}\frac{f(x
++ \Delta x) \cdot g(x) - f(x)\cdot g(x + \Delta x)}{\Delta x \cdot g(x +
+\Delta x) \cdot g(x)} =\]</span> <span class="math display">\[= \left(
+\frac{f(x)}{g(x)}\right)’_{|x = x_0} = \frac{f’(x_0)\cdot g(x_0) -
+g’(x_0) \cdot f(x_0)}{g(x_0)^2} \,\,\,\,\blacksquare\]</span></p>
+<h2
+id="производная-композиции-функций-производная-обратной-функции.-таблица-производных">Производная
+композиции функций, производная обратной функции. Таблица
+производных</h2>
+<hr />
+<p><strong>Теорема:</strong><a name="theorem-29"></a> Пусть <span
+class="math inline">\(f(x)\)</span> непрерывна строго возрастает в <span
+class="math inline">\(B(x_0)\)</span>, <span
+class="math inline">\(\exists f^{-1}(y)\)</span> в <span
+class="math inline">\(B(y_0), \,\,\,\, y_0 = f(x_0)\)</span> и <span
+class="math inline">\(\exists f’(x_0) \ne 0\)</span>. Тогда <span
+class="math inline">\(\exists \left(f^{-1}(y)\right)’_{|y = y_0} =
+\frac{1}{f’(x_0)}\)</span>.</p>
+<p><em>Доказательство:</em> <span
+class="math inline">\(\left(f^{-1}(y)\right)’_{|y = y_0} = \displaystyle
+\lim_{y\to y_0}\frac{f^{-1}(y) - f^{-1}(y_0)}{y - y_0} = \displaystyle
+\lim_{x\to x_0}\frac{x - x_0}{f(x) - f(x_0)} =
+\frac{1}{f’(x_0)}\)</span> (С чего мы можем заменить <span
+class="math inline">\(x \to x_0\)</span> на <span
+class="math inline">\(y \to y_0\)</span>?)</p>
+<p><strong>Теорема:</strong><a name="theorem-30"></a> Пусть <span
+class="math inline">\(\exists g’(x_0)\)</span> и <span
+class="math inline">\(\exists f’(g(x_0)\)</span>. Тогда <span
+class="math display">\[\exists f(g(x))’_{|x = x_0} = f’(g(x_0))\cdot
+g’(x_0)\]</span></p>
+<p><em>Доказательство:</em> Пусть <span class="math inline">\(f(x) \ne
+f(x_0)\)</span> при <span class="math inline">\(x \ne x_0\)</span>.
+<span class="math display">\[f(g(x))’_{|x = x_0} = \displaystyle
+\lim_{x\to x_0}\frac{f(g(x)) - f(g(x_0))}{x - x_0}\]</span> <span
+class="math display">\[= \displaystyle \lim_{x\to x_0}\frac{f(g(x)) -
+f(g(x_0))}{x - x_0}\cdot \frac{g(x) - g(x_0)}{g(x) - g(x_0)} =
+f’(g(x_0))\cdot g’(x_0)\,\,\,\,\blacksquare\]</span></p>
+<hr />
+<table>
+<thead>
+<tr class="header">
+<th>Функция</th>
+<th>Производная</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(x^{\alpha}\)</span></td>
+<td><span class="math inline">\(\alpha \cdot x^{\alpha -
+1}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\sin(x)\)</span></td>
+<td><span class="math inline">\(\cos(x)\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\cos(x)\)</span></td>
+<td><span class="math inline">\(-\sin(x)\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\tan(x)\)</span></td>
+<td><span class="math inline">\(\frac{1}{\cos^2(x)}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\cot(x)\)</span></td>
+<td><span class="math inline">\(-\frac{1}{\sin^2(x)}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\sin^{-1}(x)\)</span></td>
+<td><span class="math inline">\(\frac{1}{\sqrt{1 - x^2}}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\cos^{-1}(x)\)</span></td>
+<td><span class="math inline">\(-\frac{1}{\sqrt{1 - x^2}}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\tan^{-1}(x)\)</span></td>
+<td><span class="math inline">\(\frac{1}{1 + x^2}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\cot^{-1}(x)\)</span></td>
+<td><span class="math inline">\(-\frac{1}{1 + x^2}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\ln(x)\)</span></td>
+<td><span class="math inline">\(\frac{1}{x}\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\log_a(x)\)</span></td>
+<td><span class="math inline">\(\frac{1}{x\cdot \ln(a)}\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(e^x\)</span></td>
+<td><span class="math inline">\(e^x\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(a^x\)</span></td>
+<td><span class="math inline">\(a^x\cdot \ln(a)\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\sinh(x)\)</span></td>
+<td><span class="math inline">\(\cosh(x)\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\cosh(x)\)</span></td>
+<td><span class="math inline">\(\sinh(x)\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2
+id="дифференцируемость-функций-первый-дифференциал.-связь-между-дифференцируемостью-и-существованием-производной">Дифференцируемость
+функций, первый дифференциал. Связь между дифференцируемостью и
+существованием производной</h2>
+<hr />
+<p><strong>Определение:</strong><a name="definition-15"></a>
+<em>Дифференцирование</em> - это нахождение дифференциала.</p>
+<p><strong>Определение:</strong><a name="definition-16"></a> Пусть <span
+class="math inline">\(f(x)\)</span> определена в <span
+class="math inline">\(B(x_0)\)</span>. Если <span
+class="math inline">\(\exists A \in \mathbb{R}\)</span>, такое что <span
+class="math display">\[f(x + \Delta x) - f(x) = A\cdot \Delta x +
+\overline{\overline{o}}(\Delta x), \,\,\,\, \Delta x \to 0,\]</span> то
+<span class="math inline">\(f(x)\)</span> <em>дифференцируема</em> в т.
+<span class="math inline">\(x_0\)</span>, а главная линейная часть <span
+class="math inline">\(A\cdot \Delta x\)</span> ее полного приращения
+<span class="math inline">\(f(x + \Delta x) - f(x)\)</span> - <em>первый
+дифференциал</em> <span class="math inline">\(f(x)\)</span> в т. <span
+class="math inline">\(x_0\)</span>.</p>
+<p><strong>Обозначение:</strong> <span class="math inline">\(df(x)
+\stackrel{def}{=} A\cdot \Delta x\)</span></p>
+<p><strong>Теорема:</strong><a name="theorem-31"></a> <span
+class="math inline">\(f(x)\)</span> дифференцируема в т. <span
+class="math inline">\(x_0 \Leftrightarrow \exists f’(x_0)\)</span>.</p>
+<p><em>Доказательство:</em> Записать определение того и другого.</p>
+<p><strong>Определение:</strong><a name="definition-17"></a> Если <span
+class="math inline">\(f(x)\)</span> дифференцируема во всех точках
+множества <span class="math inline">\(X \subset \mathbb{R}\)</span>, то
+<span class="math inline">\(f(x) \in \mathcal{D}(X)\)</span> (множество
+всех дифференцируемых функций на <span
+class="math inline">\(X\)</span>).</p>
+<h3 id="дифференциал-независимой-переменной">Дифференциал независимой
+переменной</h3>
+<p>Пусть <span class="math inline">\(f(x) = x\)</span>. Посчитаем
+дифференциал: <span class="math inline">\(f(x + \Delta x) - f(x) = x +
+\Delta x - x = \Delta x = dx\)</span>.</p>
+<h2
+id="полукасательные-и-касательная-к-графику-функции.-геометрический-смысл-первого-дифференциала.-инвариантность-первого-дифференциала-и-неинвариантность-производной">Полукасательные
+и касательная к графику функции. Геометрический смысл первого
+дифференциала. Инвариантность первого дифференциала и неинвариантность
+производной</h2>
+<hr />
+<h3
+id="инвариантность-первого-дифференциала-и-неинвариантность-производной">Инвариантность
+первого дифференциала и неинвариантность производной</h3>
+<p>Берем функцию <span class="math inline">\(f(x)\)</span> считаем
+дифференциал: <span class="math inline">\(df(x) = f’(x)dx\)</span>.
+Вспоминаем, что <span class="math inline">\(f(x) = f(g(t))\)</span>. Ни
+о чем не заботясь, вставляем: <span class="math inline">\(df(g(t)) =
+f’(g(t))dg(t) = f’(g(t))g’(t)dt\)</span>. Теперь посчитаем дифференциал
+<span class="math inline">\(f(g(t))\)</span>: <span
+class="math inline">\(df(g(t)) = (f(g(t)))’dt =
+f’(g(t))g’(t)dt\)</span>. Следовательно первый дифференциал инвариантен
+<span class="math inline">\(\,\,\,\,\blacksquare\)</span>.</p>
+<p>Попробуем то же самое с производной. Пусть <span
+class="math inline">\(f’(x)\)</span> производная. Вспоминаем, что <span
+class="math inline">\(f(x) = f(g(t))\)</span>. Ни о чем не заботясь,
+вставляем: <span class="math inline">\(f’(g(t))\)</span>. Посчитаем
+производную по правилам: <span class="math inline">\((f(g(t)))’ =
+f’(g(t))g’(t)\)</span>. Следовательно производная неинвариантна <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span>.</p>
+<h3 id="полукасательные-и-касательная-к-графику-функции">Полукасательные
+и касательная к графику функции</h3>
+<iframe src="https://www.desmos.com/calculator/ozskwyjrex?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0">
+</iframe>
+<p><strong>Определение:</strong><a name="definition-18"></a> Если в т.
+<span class="math inline">\(x_0 \,\,\,\, f_{-}’(x_0) =
+f_{+}’(x_0)\)</span>, то прямая <span class="math inline">\(y = f(x_0) +
+f’(x_0)\cdot (x - x_0)\)</span> - <em>касательная</em> к графику <span
+class="math inline">\(f(x)\)</span> в т. <span
+class="math inline">\(x_0\)</span>.</p>
+<h3 id="геометрический-смысл-первого-дифференциала">Геометрический смысл
+первого дифференциала</h3>
+<p><span class="math inline">\(df(x_0) = f’(x_0)dx = f’(x_0)(x -
+x_0)\)</span>. То есть касательная к графику <span
+class="math inline">\(f(x)\)</span> в т. <span
+class="math inline">\(x_0\)</span> - это <span class="math inline">\(y =
+f(x_0) + df(x_0)\)</span>.</p>
+<h2
+id="старшие-производные.-старшие-дифференциалы.-неинвариантность-второго-дифференциала">Старшие
+производные. Старшие дифференциалы. Неинвариантность второго
+дифференциала</h2>
+<hr />
+<p><img src="img/cat.gif" alt="ну, мне лень немного" style="width:200px;height:200px;"></p>
+<h2
+id="теорема-ферма-необходимый-признак-локального-экстремума-теорема-ролля.-формула-лагранжа-и-следствие-из-неё">Теорема
+Ферма, необходимый признак локального экстремума, теорема Ролля. Формула
+Лагранжа и следствие из неё</h2>
+<hr />
+<p><strong>Определение:</strong><a name="definition-19"></a> Пусть <span
+class="math inline">\(f(x)\)</span> определена в <span
+class="math inline">\(B_{\delta}(x_0)\)</span> и <span
+class="math inline">\(\forall x \in B_{\delta}(x_0) \,\,\,\, f(x) &lt;
+f(x_0)\)</span>. Тогда <span class="math inline">\(f(x)\)</span> имеет
+строгий локальный максимум в т. <span
+class="math inline">\(x_0\)</span>.</p>
+<p><strong>Упражнение:</strong><a name="exercise-1"></a> Вы ведь все
+поняли? Запишите, не глядя сюда, определение локального минимума.</p>
+<p><strong>Теорема:</strong><a name="theorem-32"></a> (Ферма) Пусть
+<span class="math inline">\(f(x)\)</span> определена в <span
+class="math inline">\(B_{\delta}(x_0)\)</span> и имеет строгий локальный
+максимум в т. <span class="math inline">\(x_0\)</span>. Тогда <br> Если
+<span class="math inline">\(\exists f_{-}’(x_0)\)</span>, то <span
+class="math inline">\(f_{-}’(x_0) \ge 0\)</span><br> Если <span
+class="math inline">\(\exists f_{+}’(x_0)\)</span>, то <span
+class="math inline">\(f_{+}’(x_0) \le 0\)</span><br></p>
+<p><em>Доказательство:</em> <span class="math inline">\(\forall x \in
+B(x_0) \,\,\,\, f(x) &lt; f(x_0)\)</span>. <span
+class="math inline">\(f_{-}’(x_0) = \displaystyle \lim_{\Delta x\to 0,
+\Delta x &lt; 0}\frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} \Rightarrow
+f_{-}’(x_0) \ge 0 \,\,\,\,\blacksquare\)</span></p>
+<p><strong>Следствие:</strong><a name="corollary-3"></a> Если в условиях
+теоремы <span class="math inline">\(\exists f’(x_0)\)</span>, то <span
+class="math inline">\(f’(x_0) = 0\)</span>.</p>
+<p><em>Доказательство:</em> очев <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><strong>Теорема:</strong><a name="theorem-33"></a> (Ролля) Если <span
+class="math inline">\(f(x) \in C[a, b], \,\,\,\, f(x) \in \mathcal{D}(a,
+b)\)</span> и <span class="math inline">\(f(a) = f(b)\)</span>, то <span
+class="math inline">\(\exists c \in (a, b): f’(c) = 0\)</span>.</p>
+<p><em>Доказательство:</em> По <a href="#theorem-18">2-й теореме
+Вейерштрасса</a> на <span class="math inline">\([a, b] \,\,\,\, \exists
+\min{f(x)} = x_{min}\)</span> и <span class="math inline">\(\exists
+\max{f(x)} = x_{max}\)</span>. Если <span class="math inline">\(x_{min}
+\in (a, b)\)</span>, то по <a href="#corollary-3">следствию</a> <span
+class="math inline">\(f’(x_{min}) = 0\)</span>. Если <span
+class="math inline">\(x_{max} \in (a, b)\)</span>, то по <a
+href="#corollary-3">следствию</a> <span
+class="math inline">\(f’(x_{max}) = 0\)</span>. Иначе <span
+class="math inline">\(f(x_{max}) = f(x_{min}) = f(a) = f(b) \Rightarrow
+f(x) = const \Rightarrow \forall x \in (a, b) \,\,\,\, f’(x) = 0
+\,\,\,\,\blacksquare\)</span></p>
+<p><strong>Теорема:</strong><a name="theorem-34"></a> (Лагранжа) Если
+<span class="math inline">\(f(x) \in C[a, b], \,\,\,\, f(x) \in
+\mathcal{D}(a, b)\)</span>, то <span class="math inline">\(\exists c \in
+(a, b): f’(c)\cdot (b - a) = f(b) - f(a)\)</span>.</p>
+<p><em>Доказательство:</em> Рассмотрим функцию <span
+class="math inline">\(\varphi (x) = f(x) - \frac{f(b) - f(a)}{b - a}(x -
+a)\)</span>. <span class="math inline">\(\varphi (a) = f(a) = \varphi
+(b) \Rightarrow\)</span> по <a href="#theorem-33">теореме Ролля</a>
+<span class="math inline">\(\exists c \in (a, b): \,\,\,\, \varphi ’(c)
+= 0 = f’(c) - \frac{f(b) - f(a)}{b - a}
+\,\,\,\,\blacksquare\)</span></p>
+<p><strong>Следствие:</strong><a name="corollary-4"></a> Если <span
+class="math inline">\(\forall x \in (a, b) \,\,\,\, f ’(x) = 0\)</span>,
+то <span class="math inline">\(f(x) = const\)</span>.</p>
+<h2
+id="формула-коши.-связь-монотонности-функции-и-знака-производной">Формула
+Коши. Связь монотонности функции и знака производной</h2>
+<hr />
+<p><strong>Теорема:</strong><a name="theorem-35"></a> (Формула Коши)
+Если <span class="math inline">\(f(x), g(x) \in C[a, b], \,\,\,\, f(x),
+g(x) \in \mathcal{D}(a, b), \,\,\,\, g’(x) \ne 0 \,\,\,\, \forall x \in
+(a, b)\)</span>, то <span class="math inline">\(\exists c \in (a, b):
+\frac{f’(c)}{g’(c)} = \frac{f(b) - f(a)}{g(b) - g(a)}\)</span>.</p>
+<p><em>Доказательство:</em> <span class="math inline">\(g(b) \ne
+g(a)\)</span> по <a href="#theorem-33">теореме Ролля</a>. Рассмотрим
+функцию <span class="math inline">\(\varphi (x) = f(x) - \frac{f(b) -
+f(a)}{g(b) - g(a)}(g(x) - g(a))\)</span>. <span
+class="math inline">\(\varphi (a) = f(a) = \varphi (b)
+\Rightarrow\)</span> по <a href="#theorem-33">теореме Ролля</a> <span
+class="math inline">\(\exists c \in (a, b): \,\,\,\, \varphi ’(c) = 0 =
+f’(c) - \frac{f(b) - f(a)}{g(b) - g(a)}
+\,\,\,\,\blacksquare\)</span></p>
+<p><strong>Теорема:</strong><a name="theorem-38"></a></p>
+<ol type="1">
+<li>Пусть <span class="math inline">\(f(x) \in \mathcal{D}(a,
+b)\)</span> и возрастает на <span class="math inline">\((a, b)\)</span>.
+Тогда <span class="math inline">\(f’(x) \ge 0\)</span> на <span
+class="math inline">\((a, b)\)</span>.</li>
+<li>Пусть <span class="math inline">\(f(x) \in \mathcal{D}(a,
+b)\)</span> и <span class="math inline">\(f’(x) \ge 0\)</span> на <span
+class="math inline">\((a, b)\)</span>. Тогда <span
+class="math inline">\(f(x)\)</span> возрастает на <span
+class="math inline">\((a, b)\)</span>.</li>
+<li>Пусть <span class="math inline">\(f(x) \in \mathcal{D}(a,
+b)\)</span> и <span class="math inline">\(f’(x) &gt; 0\)</span> на <span
+class="math inline">\((a, b)\)</span>. Тогда <span
+class="math inline">\(f(x)\)</span> строго возрастает на <span
+class="math inline">\((a, b)\)</span>.</li>
+</ol>
+<p><em>Доказательство:</em> 1. <span class="math inline">\(\forall x_1,
+x_2 \in (a, b) \,\,\,\, \frac{f(x_2) - f(x_1)}{x_2 - x_1} \ge
+0\)</span>, так как из <span class="math inline">\(x_2 &gt; x_1\)</span>
+следует <span class="math inline">\(f(x_2) \ge f(x_1)\)</span>.
+Зафиксируем <span class="math inline">\(x_1\)</span>. Тогда из <a
+href="#theorem-12">теоремы</a> следует <span
+class="math inline">\(f’(x_1) \ge 0 \,\,\,\,\blacksquare\)</span> 2.
+почти также. 3. совсем также.</p>
+<h2
+id="отсутствие-у-производной-дифференцируемой-функции-устранимых-разрывов-и-разрывов-первого-рода.-теорема-дарбу-о-промежуточных-значениях-производной">Отсутствие
+у производной дифференцируемой функции устранимых разрывов и разрывов
+первого рода. Теорема Дарбу о промежуточных значениях производной</h2>
+<hr />
+<p><strong>Теорема:</strong><a name="theorem-36"></a> Если <span
+class="math inline">\(f(x) \in \mathcal{D}(a, b)\)</span>, то у <span
+class="math inline">\(f(x)\)</span> нет разрывов первого рода и
+устранимых разрывов на <span class="math inline">\((a, b)\)</span>.</p>
+<p><em>Доказательство:</em> Ну, лажа тут какая-то.</p>
+<p><strong>Теорема:</strong><a name="theorem-37"></a> (Дарбу) Пусть
+<span class="math inline">\(f(x) \in \mathcal{D}[a, b], \,\,\,\, A =
+f’(a), \,\,\,\, B = f’(b)\)</span>. Тогда <span
+class="math inline">\(\forall C\)</span> между <span
+class="math inline">\(A\)</span> и <span class="math inline">\(B
+\,\,\,\, \exists c \in [a, b]: \,\,\,\, f’(c) = C\)</span>.</p>
+<p><em>Доказательство:</em> Интересно, я просто устала или тут тоже
+лажа?</p>
+<p>короче, и тут котик получился:</p>
+<p><img src="img/cat.gif" alt="мне непонятно" style="width:200px;height:200px;"></p>
+<h2 id="правила-лопиталя">Правила Лопиталя</h2>
+<hr />
+<p><strong>Теорема:</strong><a name="theorem-39"></a> Пусть <span
+class="math inline">\(f(x), g(x) \in \mathcal{D}(B(x_0)),\,\,\,\, g(x)
+\ne 0 \,\,\,\, \forall x \in \mathring{B}(x_0), \,\,\,\, g’(x_0) \ne 0,
+\,\,\,\, g(x_0) = f(x_0) = 0.\)</span> Тогда <span
+class="math display">\[\displaystyle \lim_{x\to x_0}\frac{f(x)}{g(x)} =
+\frac{f’(x_0)}{g’(x_0)}\]</span></p>
+<p><em>Доказательство:</em> <span class="math display">\[\displaystyle
+\lim_{x\to x_0}\frac{f(x)}{g(x)} = \displaystyle \lim_{x\to
+x_0}\frac{f(x) - f(x_0)}{g(x) - g(x_0)} = \displaystyle \lim_{x\to
+x_0}\frac{\frac{f(x) - f(x_0)}{x - x_0}}{\frac{g(x) - g(x_0)}{{x -
+x_0}}} = \frac{f’(x_0)}{g’(x_0)} \,\,\,\,\blacksquare\]</span></p>
+<p><strong>Теорема:</strong><a name="theorem-40"></a> Пусть <span
+class="math inline">\(f(x), g(x) \in \mathcal{D}(B(x_0)), \,\,\,\, g(x)
+\ne 0, \,\,\,\, g’(x) \ne 0, \,\,\,\, \displaystyle \lim_{x\to x_0}f(x)
+= \displaystyle \lim_{x\to x_0}g(x) = 0.\)</span> Тогда</p>
+<ol type="1">
+<li>Если <span class="math inline">\(\exists \displaystyle \lim_{x\to
+x_0}\frac{f’(x)}{g’(x)} = A\)</span>, то <span
+class="math inline">\(\exists \displaystyle \lim_{x\to
+x_0}\frac{f(x)}{g(x)} = A\)</span>.</li>
+<li>Если <span class="math inline">\(\exists \displaystyle \lim_{x\to
+x_0}\frac{f’(x)}{g’(x)} = \infty\)</span>, то <span
+class="math inline">\(\exists \displaystyle \lim_{x\to
+x_0}\frac{f(x)}{g(x)} = \infty\)</span>.</li>
+</ol>
+<p><em>Доказательство:</em> Доопределим <span
+class="math inline">\(f(x)\)</span> и <span
+class="math inline">\(g(x)\)</span> в т. <span
+class="math inline">\(x_0\)</span> нулями. По <a
+href="#theorem-35">формуле Коши</a> <span class="math inline">\(\forall
+x \in [x_0, ?] \,\,\,\, \exists c: \,\,\,\, \frac{f(x)}{g(x)} =
+\frac{f(x) - f(x_0)}{g(x) - g(x_0)} = \frac{f’(c)}{g’(c)}\)</span></p>
+<p><strong>Теорема:</strong><a name="theorem-41"></a> Пусть <span
+class="math inline">\(f(x), g(x) \in \mathcal{D}(a, +\infty), \,\,\,\, a
+&gt; 0, \,\,\,\, g(x) \ne 0, \,\,\,\, g’(x) \ne 0, \,\,\,\,
+\displaystyle \lim_{x\to +\infty}f(x) = \displaystyle \lim_{x\to
++\infty}g(x) = 0.\)</span> Тогда</p>
+<ol type="1">
+<li>Если <span class="math inline">\(\exists \displaystyle \lim_{x\to
++\infty}\frac{f’(x)}{g’(x)} = A\)</span>, то <span
+class="math inline">\(\exists \displaystyle \lim_{x\to
++\infty}\frac{f(x)}{g(x)} = A\)</span>.</li>
+<li>Если <span class="math inline">\(\exists \displaystyle \lim_{x\to
++\infty}\frac{f’(x)}{g’(x)} = \infty\)</span>, то <span
+class="math inline">\(\exists \displaystyle \lim_{x\to
++\infty}\frac{f(x)}{g(x)} = \infty\)</span>.</li>
+</ol>
+<p><em>Доказательство:</em> Рассмотрим <span
+class="math inline">\(\phi(t) = f(\frac{1}{t}), \,\,\,\, \psi(t) =
+g(\frac{1}{t})\)</span> на <span class="math inline">\((0,
+\frac{1}{a})\)</span>. <span class="math inline">\(\phi’(t) =
+-\frac{1}{t^2}\cdot f’(\frac{1}{t}), \,\,\,\, \psi’(t) =
+-\frac{1}{t^2}\cdot g’(\frac{1}{t}) \Rightarrow \frac{\phi ’(x)}{\psi
+’(x)} = \frac{f’(x)}{g’(x)}\)</span> далее по <a
+href="#theorem-40">теореме</a> <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><strong>Теорема:</strong><a name="theorem-42"></a> Пусть <span
+class="math inline">\(f(x), g(x) \in \mathcal{D}(a - \delta, a),
+\,\,\,\, g(x) \ne 0, \,\,\,\, g’(x) \ne 0, \,\,\,\, \displaystyle
+\lim_{x\to a-0}f(x) = \displaystyle \lim_{x\to a-0}g(x) = 0.\)</span>
+Тогда</p>
+<ol type="1">
+<li>Если <span class="math inline">\(\exists \displaystyle \lim_{x\to
+a-0}\frac{f’(x)}{g’(x)} = A\)</span>, то <span
+class="math inline">\(\exists \displaystyle \lim_{x\to
+a-0}\frac{f(x)}{g(x)} = A\)</span>.</li>
+<li>Если <span class="math inline">\(\exists \displaystyle \lim_{x\to
+a-0}\frac{f’(x)(}{g’(x)} = \infty\)</span>, то <span
+class="math inline">\(\exists \displaystyle \lim_{x\to
+a-0}\frac{f(x)}{g(x)} = \infty\)</span>.</li>
+</ol>
+<p><em>Доказательство:</em></p>
+<ol type="1">
+<li><span class="math inline">\(\displaystyle \lim_{x\to
+a-0}\frac{f’(x)}{g’(x)} = A\)</span>, то есть <span
+class="math inline">\(\forall \varepsilon &gt; 0 \,\,\,\, \exists
+\delta_1 &gt; 0: \,\,\,\, \forall x \in (a - \delta_1, a) \,\,\,\,
+|\frac{f’(x)}{g’(x)} - A| &lt; \varepsilon\)</span>. Пусть <span
+class="math inline">\(x_0 \in (a - \delta_1, a)\)</span></li>
+</ol>
+<h2
+id="формула-тейлора.-остаточный-член-в-форме-пеано-и-в-общей-форме.-остаточный-член-в-форме-лагранжа">Формула
+Тейлора. Остаточный член в форме Пеано и в общей форме. Остаточный член
+в форме Лагранжа</h2>
+<hr />
+<p><strong>Определение:</strong><a name="definition-20"></a> Пусть <span
+class="math inline">\(\exists f^{(n)}(x_0)\)</span>. Выражение <span
+class="math inline">\(f(x) = \displaystyle \sum_{k =
+0}^{n}\frac{f^{(k)}(x_0)}{k!}\cdot (x - x_0)^k + r_n(x, x_0)\)</span> -
+<em>формула Тейлора</em> для <span class="math inline">\(f(x)\)</span> с
+центром разложения в т.<span class="math inline">\(x_0\)</span>.</p>
+<p><strong>Теорема:</strong><a name="theorem-43"></a> (Остаточный член в
+форме Пеано) <span class="math display">\[r_n(x, x_0) =
+\overline{\overline{o}}((x - x_0)^n)\]</span></p>
+<p><em>Доказательство:</em> <span class="math display">\[\displaystyle
+\lim_{x\to x_0}\frac{r_n(x, x_0)}{(x - x_0)^n} = \displaystyle
+\lim_{x\to x_0}\frac{f(x) - \displaystyle \sum_{k =
+0}^{n}\frac{f^{(k)}(x_0)}{k!}\cdot (x - x_0)^k}{(x - x_0)^n}
+\stackrel{?}{=}\]</span> <span
+class="math display">\[\stackrel{?}{=}\displaystyle \lim_{x\to
+x_0}\frac{f’(x) - \displaystyle \sum_{k = 1}^{n}\frac{f^{(k)}(x_0)}{(k -
+1)!}\cdot (x - x_0)^{k - 1}}{n \cdot (x - x_0)^{n -
+1}}\stackrel{?}{=}\ldots \stackrel{?}{=}\]</span> <span
+class="math display">\[\stackrel{?}{=} \displaystyle \lim_{x\to
+x_0}\frac{f^{(n - 1)}(x) - f^{(n - 1)}(x_0) - f^{(n)}(x_0)\cdot (x -
+x_0)}{n! \cdot (x - x_0)} = 0 \,\,\,\,\blacksquare\]</span></p>
+<p><strong>Теорема:</strong><a name="theorem-44"></a> (Остаточный член в
+общей форме) Пусть <span class="math inline">\(f(t) \in \mathcal{D}^n[x,
+x_0]\)</span> и <span class="math inline">\(f(t) \in \mathcal{D}^{n +
+1}(x, x_0), \,\,\,\, \varphi (x) \in C[x, x_0], \,\,\,\, \varphi (x) \in
+\mathcal{D}(x, x_0), \,\,\,\, \varphi’(x) \ne 0\)</span>. Тогда <span
+class="math display">\[\exists c \in (x, x_0): \,\,\,\,r_n(x, x_0) =
+\frac{f^{(n + 1)}(c) \cdot (x - c)^n}{n!} \cdot \frac{\varphi(x) -
+\varphi(x_0)}{\varphi’(c)}\]</span></p>
+<p><em>Доказательство:</em> Пусть <span class="math inline">\(\psi(t) =
+\displaystyle \sum_{k = 0}^{n}\frac{f^{(k)}(t)}{k!}\cdot (x -
+t)^k\)</span>. Тогда <span class="math inline">\(\psi(x_0) =
+\displaystyle \sum_{k = 0}^{n}\frac{f^{(k)}(x_0)}{k!}\cdot (x - x_0)^k,
+\,\,\,\, \psi(x) = f(x)\)</span>. <span class="math display">\[\psi’(t)
+= \displaystyle \sum_{k = 0}^{n}\frac{f^{(k + 1)}(t)}{k!}\cdot (x - t)^k
+- \displaystyle \sum_{k = 1}^{n}\frac{f^{(k)}(t)}{(k - 1)!}\cdot (x -
+t)^{k - 1} = \frac{f^{(n + 1)}(t)}{n!}\cdot (x - t)^n\]</span> <span
+class="math display">\[\frac{r_n(x, x_0)}{\varphi(x) - \varphi(x_0)} =
+\frac{\psi(x) - \psi(x_0)}{\varphi(x) - \varphi(x_0)} \stackrel{\text{т.
+Коши}}{=} \frac{\psi’(c)}{\varphi’(c)} = \frac{1}{\varphi’(c)}\cdot
+\frac{f^{(n + 1)}(c)}{n!}\cdot (x - c)^n
+\,\,\,\,\blacksquare\]</span></p>
+<p><strong>Следствие:</strong><a name="corollary-5"></a> (Остаточный
+член в форме Лагранжа) <span class="math display">\[r_n(x, x_0) =
+\frac{f^{(n + 1)}(c)\cdot (x - x_0)^{n + 1}}{(n + 1)!}\]</span></p>
+<p><em>Доказательство:</em> Возьмем <span
+class="math inline">\(\varphi(x) = (x - x_0)^{n}\)</span>. Запишем
+остаточный член в общей форме: <span class="math display">\[\frac{f^{(n
++ 1)}(c) \cdot (x - c)^n}{n!} \cdot \frac{(x - x_0)^{n} - 0}{n \cdot (x
+- x_0)^{n - 1}} = \frac{f^{(n + 1)}(c)\cdot (x - x_0)^{n + 1}}{(n + 1)!}
+\,\,\,\,\blacksquare\]</span></p>
+<h2
+id="формула-тейлора-для-основных-элементарных-функций.-достаточные-условия-локального-экстремума.-общая-схема-поиска-глобального-экстремума-функции-на-отрезке">Формула
+Тейлора для основных элементарных функций. Достаточные условия
+локального экстремума. Общая схема поиска глобального экстремума функции
+на отрезке</h2>
+<hr />
+<p><strong>Теорема:</strong><a name="theorem-45"></a> Пусть <span
+class="math inline">\(f(x) \in \mathcal{D}(x_0)\)</span>. Если при <span
+class="math inline">\(x &lt; x_0 \,\,\,\, f’(x) &lt; 0\)</span>, при
+<span class="math inline">\(x &gt; x_0 \,\,\,\, f’(x) &gt; 0\)</span>,
+то в т. <span class="math inline">\(x_0\)</span> минимум функции <span
+class="math inline">\(f(x)\)</span>.</p>
+<p><em>Доказательство:</em> По <a href="#theorem-34">т. Лагранжа</a> для
+<span class="math inline">\(\forall x &lt; x_0 \,\,\,\, \exists c \in
+(x, x_0): \,\,\,\, f(x_0) - f(x) = f’(c)\cdot (x_0 - x) (1)\)</span>.
+Так как <span class="math inline">\(c \in (x, x_0) \,\,\,\, f’(c) &lt;
+0\)</span> и из <span class="math inline">\(x &lt; x_0\)</span> следует
+<span class="math inline">\(x_0 - x &gt; 0\)</span>. Значит правая часть
+равенства <span class="math inline">\((1)\)</span> отрицательна <span
+class="math inline">\(\Rightarrow \forall x &lt; x_0 \,\,\,\, f(x) &gt;
+f(x_0) \,\,\,\,\blacksquare\)</span></p>
+<p><strong>Упражнение:</strong><a name="exercise-2"></a> Дописать
+доказательство, сформулировать теорему для максимума и доказать ее.</p>
+<p><strong>Упражнение:</strong><a name="exercise-3"></a> Понять почему в
+доказательстве можно применять т. Лагранжа.</p>
+<h2
+id="выпуклые-функции-достаточное-условие-строгой-выпуклости.-теорема-о-касательной-к-графику-выпуклой-функции.-точки-перегиба.-необходимое-и-достаточные-условия-наличия-точки-перегиба.-асимптоты">Выпуклые
+функции, достаточное условие строгой выпуклости. Теорема о касательной к
+графику выпуклой функции. Точки перегиба. Необходимое и достаточные
+условия наличия точки перегиба. Асимптоты</h2>
+<hr />
+<p><strong>Определение:</strong><a name="definition-21"></a> Для <span
+class="math inline">\(f(x), \,\,\,\, x_1, \,\,\,\, x_2 \,\,\,\,\,\,\,\,
+l(x) = \frac{f(x_1)\cdot (x_2 - x) + f(x_2)\cdot (x - x_1)}{x_2 -
+x_1}\)</span>. (Прямая, проходящая через две заданные точки функции)</p>
+<p><strong>Определение:</strong><a name="definition-22"></a> Пусть <span
+class="math inline">\(f(x)\)</span> определена на <span
+class="math inline">\((a, b)\)</span>. Если <span
+class="math inline">\(\forall x_1 &lt; x_2 \in (a, b)\)</span> и <span
+class="math inline">\(\forall x \in (x_1, x_2)\)</span>:</p>
+<ol type="1">
+<li><span class="math inline">\(f(x) \le l(x)\)</span>, то <span
+class="math inline">\(f(x)\)</span> выпуклая вниз.</li>
+<li><span class="math inline">\(f(x) \ge l(x)\)</span>, то <span
+class="math inline">\(f(x)\)</span> выпуклая вверх.</li>
+</ol>
+<p><strong>Теорема:</strong><a name="theorem-46"></a> Если на <span
+class="math inline">\((a, b) \,\,\,\, f’’(x) &gt; 0\)</span>, то <span
+class="math inline">\(f(x)\)</span> выпукла вниз на <span
+class="math inline">\((a, b)\)</span>.</p>
+<p><em>Доказательство:</em> <span class="math inline">\(\forall x_1 &lt;
+x_2 \in (a, b)\)</span></p>
+<p><span class="math display">\[l(x) - f(x) = \frac{f(x_1)\cdot (x_2 -
+x) + f(x_2)\cdot (x - x_1)}{x_2 - x_1} - f(x) \cdot \frac{(x_2 - x) + (x
+- x_1)}{x_2 - x_1} =\]</span> <span
+class="math display">\[=\frac{(f(x_1) - f(x))\cdot (x_2 - x) + (f(x_2) -
+f(x))\cdot (x - x_1)}{x_2 - x_1}\]</span> По <a
+href="#theorem-34">теореме Лагранжа</a> <span
+class="math inline">\(\exists \xi, \zeta:\,\,\,\, f(x_1) - f(x) =
+f’(\xi)\cdot (x_1 - x) \,\,\,\, f(x_2) - f(x) = f’(\zeta)\cdot (x_2 -
+x)\)</span>. <span class="math display">\[=\frac{f’(\xi)\cdot (x_1 - x)
+\cdot (x_2 - x) + f’(\zeta)\cdot (x_2 - x)\cdot (x - x_1)}{x_2 -
+x_1}=\]</span> <span class="math display">\[=\frac{(x_1 - x) \cdot (x_2
+- x)(f’(\xi) - f’(\zeta))}{x_2 - x_1}\]</span> По <a
+href="#theorem-34">теореме Лагранжа</a> <span
+class="math inline">\(\exists \eta:\,\,\,\, f’(\xi) - f’(\zeta) =
+f’’(\eta)\cdot (\xi - \zeta)\)</span>. <span
+class="math display">\[=\frac{(x_1 - x) \cdot (x_2 - x) \cdot
+f’’(\eta)\cdot (\xi - \zeta)}{x_2 - x_1}\]</span> (Почему <span
+class="math inline">\(\xi - \zeta &gt;0\)</span>?)</p>
+<p><strong>Теорема:</strong><a name="theorem-47"></a> Если на <span
+class="math inline">\((a, b) \,\,\,\, f’’(x) &gt; 0\)</span>, то <span
+class="math display">\[\forall x_0, x \in (a, b) \,\,\,\, f(x) &gt;
+f(x_0) + f’(x_0)\cdot (x - x_0)\]</span></p>
+<p><em>Доказательство:</em> Без ограничения общности докажем для <span
+class="math inline">\(x_0 &lt; x\)</span>. <span
+class="math display">\[f(x) = f(x_0) + f’(x_0)\cdot (x - x_0) + (f(x) -
+f(x_0)) - f’(x_0)\cdot (x - x_0) =\]</span> По <a
+href="#theorem-34">теореме Лагранжа</a> <span
+class="math inline">\(\exists x_0 &lt; \zeta &lt; x:\,\,\,\, f(x) -
+f(x_0) = f’(\zeta)\cdot (x - x_0)\)</span>. <span
+class="math display">\[= f(x_0) + f’(x_0)\cdot (x - x_0) +
+(f’(\zeta)\cdot (x - x_0)) - f’(x_0)\cdot (x - x_0) =\]</span> <span
+class="math display">\[= f(x_0) + f’(x_0)\cdot (x - x_0) + (x - x_0)
+\cdot (f’(\zeta) - f’(x_0)) =\]</span> <span
+class="math display">\[=f(x_0) + f’(x_0)\cdot (x - x_0) + (x - x_0)\cdot
+(\zeta - x_0) \cdot f’’(\xi) \Rightarrow\]</span> <span
+class="math display">\[(x - x_0 &gt; 0, \,\,\,\, \zeta - x_0 &gt; 0,
+\,\,\,\, f’’(\xi) &gt; 0)\]</span> <span class="math display">\[f(x) -
+f(x_0) + f’(x_0)\cdot (x - x_0) = (x - x_0)\cdot (\zeta - x_0) \cdot
+f’’(\xi) &gt; 0 \,\,\,\,\blacksquare\]</span></p>
+<p><strong>Упражнение:</strong><a name="exercise-4"></a> Докажите эту
+теорему для <span class="math inline">\(f’’(x) &lt; 0\)</span>.</p>
+<p><strong>Определение:</strong><a name="definition-23"></a> Пусть <span
+class="math inline">\(f(x)\)</span> определена в <span
+class="math inline">\(B(x_0)\)</span> и <span
+class="math inline">\(\exists f’(x_0)\)</span>. Если выражение <span
+class="math inline">\(f(x) - (f(x_0) + f’(x_0)\cdot (x - x_0)\)</span>
+имеет разный знак при <span class="math inline">\(x &lt; x_0\)</span> и
+<span class="math inline">\(x &gt; x_0\)</span>, <span
+class="math inline">\(x_0\)</span> - <em>точка перегиба</em> графика
+функции <span class="math inline">\(f(x)\)</span>.</p>
+<p><strong>Теорема:</strong><a name="theorem-48"></a> (Необходимое
+условие существования точки перегиба) Пусть <span
+class="math inline">\(f(x)\)</span> дважды дифференцируема в <span
+class="math inline">\(B(x_0)\)</span>. Если <span
+class="math inline">\(x_0\)</span> точка перегиба <span
+class="math inline">\(f(x)\)</span>, то <span
+class="math inline">\(f’’(x_0) = 0\)</span>.</p>
+<p><em>Доказательство:</em> (от противного) Пусть <span
+class="math inline">\(f’’(x_0) &gt; 0\)</span>. Тогда <span
+class="math inline">\(\exists B_1(x_0):\,\,\,\, \forall x \in B_1(x_0)
+\Rightarrow\)</span> по <a href="#theorem-47">теореме</a> <span
+class="math inline">\(f(x) - (f(x_0) + f’(x_0)\cdot (x - x_0) &gt; 0
+\,\,\,\,\blacksquare\)</span></p>
+<p><strong>Теорема:</strong><a name="theorem-49"></a> (1-е достаточное
+условие существования точки перегиба) Пусть <span
+class="math inline">\(f(x)\)</span> дифференцируема в <span
+class="math inline">\(B(x_0)\)</span> и дважды дифференцируема в <span
+class="math inline">\(\mathring{B(x_0)}\)</span>. Если <span
+class="math inline">\(f’’(x_0)\)</span> имеет разные знаки при <span
+class="math inline">\(x &lt; x_0\)</span> и <span
+class="math inline">\(x &gt; x_0\)</span>, то <span
+class="math inline">\(x_0\)</span> - точка перегиба <span
+class="math inline">\(f(x)\)</span>.</p>
+<p><em>Доказательство:</em> Из <a href="#theorem-47">теоремы</a> и <a
+href="#exercise-4">упражнения</a> следует, что при <span
+class="math inline">\(x &lt; x_0\)</span> и <span
+class="math inline">\(x &gt; x_0\)</span> выражение <span
+class="math inline">\(f(x) - (f(x_0) + f’(x_0)\cdot (x - x_0)\)</span>
+имеет разные знаки <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span>.</p>
+<p><strong>Теорема:</strong><a name="theorem-50"></a> (2-е достаточное
+условие существования точки перегиба) Пусть <span
+class="math inline">\(f(x)\)</span> трижды дифференцируема в <span
+class="math inline">\(B(x_0)\)</span>. Если <span
+class="math inline">\(f’’’(x_0) \ne 0\)</span> и <span
+class="math inline">\(f’’(x_0) = 0\)</span>, то <span
+class="math inline">\(x_0\)</span> - точка перегиба <span
+class="math inline">\(f(x)\)</span>.</p>
+<p><em>Доказательство:</em> <span class="math inline">\(f(x) - f(x_0) -
+f’(x_0)\cdot (x - x_0) = f’(\zeta)\cdot (x - x_0) - f’(x_0)\cdot (x -
+x_0) = f’’(\xi)\cdot (\zeta - x_0) \cdot (x - x_0)????\)</span></p>
+<h3 id="асимптоты">Асимптоты</h3>
+<p><strong>Определение:</strong><a name="definition-24"></a> Если <span
+class="math inline">\(f(x)\)</span> определена в <span
+class="math inline">\(\mathring{B}(x_0)\)</span> и <span
+class="math inline">\(\displaystyle \lim_{x\to x_0+0}f(x) =
+\pm\infty\)</span> или <span class="math inline">\(\displaystyle
+\lim_{x\to x_0-0}f(x) = \pm\infty\)</span>, то прямая <span
+class="math inline">\(y = x_0\)</span> - <em>вертикальная асимптота</em>
+графика функции <span class="math inline">\(f(x)\)</span>.</p>
+<p><strong>Определение:</strong><a name="definition-25"></a> Если <span
+class="math inline">\(\displaystyle \lim_{x\to \pm\infty}(f(x) - (kx +
+b)) = 0\)</span> то прямая <span class="math inline">\(y = kx +
+b\)</span> - <em>наклонная асимптота</em> графика функции <span
+class="math inline">\(f(x)\)</span>.</p>
+<p><strong>Теорема:</strong><a name="theorem-51"></a> Прямая <span
+class="math inline">\(y = kx + b\)</span> наклонная асимптота графика
+функции <span class="math inline">\(f(x)\)</span> <span
+class="math inline">\(\Leftrightarrow \exists \displaystyle \lim_{x\to
+\pm\infty}\frac{f(x)}{x} = k\)</span> и <span
+class="math inline">\(\displaystyle \lim_{x\to \pm\infty}(f(x) - kx) =
+b\)</span>.</p>
+<p><em>Доказательство:</em> <span class="math inline">\(\displaystyle
+\lim_{x\to \pm\infty}(f(x) - (kx + b)) = 0 \Rightarrow f(x) - kx = b +
+\overline{\overline{o}}(1)\)</span>, при <span class="math inline">\(x
+\to \pm\infty \Rightarrow \frac{f(x)}{x} = k +
+\overline{\overline{o}}(1)\)</span> , при <span class="math inline">\(x
+\to \pm\infty \,\,\,\,\blacksquare\)</span></p>
+<a href="random.html" id="random_button" ><i class="fa-solid fa-ghost fa-lg" style="color: #363636;"></i></a>
+<a href="search.html" id="search_button" ><i class="fa-solid fa-search fa-lg" style="color: #363636;"></i></a>
+<a href="global-toc.html" id="back_button" ><i class="fa-solid fa-book fa-lg" style="color: #363636;"></i></a>
+<script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
+</body>
+</html>

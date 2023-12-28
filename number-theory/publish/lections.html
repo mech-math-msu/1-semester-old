@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2023-01-01" />
+  <meta name="keywords" content="теория
+чисел, лекции, мгу, мехмат, тех, техать, number theory, 1 курс" />
+  <title>Теория чисел</title>
+  <p><link rel="stylesheet" href="utils/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Playfair:opsz@5..1200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"></p>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+<!--<link rel="stylesheet" type="text/css" href="https://jsxgraph.org/distrib/jsxgraph.css" />
+ <script type="text/javascript" src="https://jsxgraph.org/distrib/jsxgraphcore.js"></script>-->
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Теория чисел</h1>
+<p class="date">2023</p>
+</header>
+<details>
+<summary>Содержание</summary>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#делимость" id="toc-делимость">Делимость</a>
+<ul>
+<li><a href="#теоремы-о-делении-с-остатком"
+id="toc-теоремы-о-делении-с-остатком">Теоремы о делении с остатком</a>
+<ul>
+<li><a href="#простейшие-свойства"
+id="toc-простейшие-свойства">Простейшие свойства</a></li>
+<li><a href="#простейшие-функции" id="toc-простейшие-функции">Простейшие
+функции</a></li>
+</ul></li>
+<li><a href="#нод" id="toc-нод">НОД</a></li>
+<li><a href="#алгоритм-евклида" id="toc-алгоритм-евклида">Алгоритм
+Евклида</a></li>
+<li><a href="#нок-и-нод-нескольких-чисел"
+id="toc-нок-и-нод-нескольких-чисел">НОК и НОД нескольких чисел</a></li>
+</ul></li>
+<li><a href="#конечные-цепные-дроби"
+id="toc-конечные-цепные-дроби">Конечные цепные дроби</a></li>
+<li><a href="#теория-сравнений" id="toc-теория-сравнений">Теория
+сравнений</a>
+<ul>
+<li><a href="#простейшие-свойства-сравнений"
+id="toc-простейшие-свойства-сравнений">Простейшие свойства
+сравнений</a></li>
+<li><a href="#функция-эйлера" id="toc-функция-эйлера">Функция
+Эйлера</a></li>
+<li><a href="#теорема-эйлера" id="toc-теорема-эйлера">Теорема
+Эйлера</a></li>
+<li><a href="#классы-вычетов" id="toc-классы-вычетов">Классы
+вычетов</a></li>
+<li><a href="#простые-числа" id="toc-простые-числа">Простые числа</a>
+<ul>
+<li><a
+href="#каноническая-запись-разложения-числа-на-простые-сомножители"
+id="toc-каноническая-запись-разложения-числа-на-простые-сомножители">Каноническая
+запись разложения числа на простые сомножители</a></li>
+<li><a href="#решето-эратосфена" id="toc-решето-эратосфена">Решето
+Эратосфена</a></li>
+</ul></li>
+<li><a href="#китайская-теорема-об-остатках"
+id="toc-китайская-теорема-об-остатках">Китайская теорема об
+остатках</a></li>
+<li><a href="#сравнения-с-одним-неизвестным"
+id="toc-сравнения-с-одним-неизвестным">Сравнения с одним неизвестным</a>
+<ul>
+<li><a href="#случай-не-взаимно-простых-a-и-m"
+id="toc-случай-не-взаимно-простых-a-и-m">Случай не взаимно простых <span
+class="math inline">\(a\)</span> и <span
+class="math inline">\(m\)</span></a></li>
+</ul></li>
+<li><a href="#полиномиальные-сравнения"
+id="toc-полиномиальные-сравнения">Полиномиальные сравнения</a>
+<ul>
+<li><a href="#метод-подъёма-решения"
+id="toc-метод-подъёма-решения">Метод “подъёма” решения</a></li>
+</ul></li>
+<li><a href="#сравнения-второй-степени"
+id="toc-сравнения-второй-степени">Сравнения второй степени</a>
+<ul>
+<li><a href="#символ-лежандра" id="toc-символ-лежандра">Символ
+Лежандра</a></li>
+<li><a href="#квадратичный-закон-взаимности"
+id="toc-квадратичный-закон-взаимности">Квадратичный закон
+взаимности</a></li>
+</ul></li>
+<li><a href="#суммы-двух-и-четырех-квадратов"
+id="toc-суммы-двух-и-четырех-квадратов">Суммы двух и четырех
+квадратов</a></li>
+<li><a href="#показатель-числа" id="toc-показатель-числа">Показатель
+числа</a></li>
+</ul></li>
+<li><a href="#первообразные-корни"
+id="toc-первообразные-корни">Первообразные корни</a>
+<ul>
+<li><a href="#существование-первообразных-корней-по-простому-модулю"
+id="toc-существование-первообразных-корней-по-простому-модулю">Существование
+первообразных корней по простому модулю</a></li>
+</ul></li>
+</ul>
+</nav>
+</details>
+<h1 id="делимость">Делимость</h1>
+<h2 id="теоремы-о-делении-с-остатком">Теоремы о делении с остатком</h2>
+<hr />
+<p><strong>Определение:</strong><a name="definition-1"></a> Пусть <span
+class="math inline">\(a \in \mathbb{Z}, b \in \mathbb{Z}, a \ne
+0\)</span>. Если <span class="math inline">\(\exists c \in
+\mathbb{Z}\)</span>, такое что <span class="math inline">\(b =
+ac\)</span>, то <span class="math inline">\(a\,\,|\,\,b\)</span> (<span
+class="math inline">\(a\)</span> делит <span
+class="math inline">\(b\)</span>)</p>
+<h3 id="простейшие-свойства">Простейшие свойства</h3>
+<p><span class="math inline">\(\forall a, b, c \in
+\mathbb{Z}\)</span></p>
+<ol type="1">
+<li><span class="math inline">\(1\,\,|\,\,a\)</span></li>
+<li>Если <span class="math inline">\(a \ne 0\)</span>, то <span
+class="math inline">\(a\,\,|\,\,a\)</span></li>
+<li>Если <span class="math inline">\(a\,\,|\,\,b\)</span>, то <span
+class="math inline">\(a\,\,|\,\,bc\)</span></li>
+<li>Если <span class="math inline">\(a\,\,|\,\,b\)</span> и <span
+class="math inline">\(b\,\,|\,\,с\)</span>, то <span
+class="math inline">\(a\,\,|\,\,c\)</span></li>
+<li>Если <span class="math inline">\(a\,\,|\,\,b\)</span> и <span
+class="math inline">\(a\,\,|\,\,с\)</span>, то <span
+class="math inline">\(a\,\,|\,\,(b \pm c)\)</span></li>
+<li>Если <span class="math inline">\(a\,\,|\,\,b\)</span>, то <span
+class="math inline">\(|a| \le |b|\)</span></li>
+</ol>
+<h3 id="простейшие-функции">Простейшие функции</h3>
+<p><strong>Определение:</strong><a name="definition-2"></a>((нижняя)
+целая часть числа) <span class="math inline">\([x] = \max \{z \in
+\mathbb{Z}: z \le x\} = \lceil x \rceil\)</span></p>
+<blockquote>
+<p><span class="math inline">\([-4.5] = -5\)</span><br> <span
+class="math inline">\([5.6] = [5]\)</span></p>
+</blockquote>
+<p><strong>Определение:</strong><a name="definition-3"></a>(дробная
+часть числа) <span class="math inline">\(\{x\} = x - [x]\)</span></p>
+<p><strong>Определение:</strong><a name="definition-4"></a>(верхняя
+целая часть числа)<span class="math inline">\(\lfloor x \rfloor = \min
+\{z \in \mathbb{Z}: z \ge x\}\)</span></p>
+<blockquote>
+<p><span class="math inline">\(\lfloor -4.5 \rfloor = -4\)</span> <br>
+<span class="math inline">\(\lfloor 5.5 \rfloor = [6]\)</span></p>
+</blockquote>
+<p><strong>Определение:</strong><a name="definition-5"></a> (расстояние
+до ближайшего целого) <span class="math inline">\(\displaystyle ||x|| =
+\min_{a \in \mathbb{Z}} |x - a|\)</span></p>
+<p><strong>Упражнение:</strong><a name="exercise-1"></a> <span
+class="math inline">\(||x|| = \min (\{x\}, 1 - \{x\})\)</span></p>
+<p><strong>Упражнение:</strong><a name="exercise-2"></a> <span
+class="math inline">\(||x + y|| \le ||x|| + ||y||\)</span></p>
+<p><strong>Теорема:</strong><a name="theorem-1"></a> (обычное деление с
+остатком) <span class="math display">\[\forall a \in \mathbb{Z},\, b \in
+\mathbb{N}\,\,\,\, \exists !\,\, q, r \in \mathbb{Z}: a = bq + r,\,\, 0
+\le r &lt; b\]</span></p>
+<p><em>Доказательство:</em></p>
+<p><em>Существование</em>: 1. Если <span
+class="math inline">\(a\,\,|\,\,b\)</span>, то <span
+class="math inline">\(q = \frac{a}{b} \in \mathbb{Z},\,\,\,\,r =
+0\)</span>. 2. Иначе рассмотрим множество <span
+class="math display">\[M=\{z \in \mathbb{N}: z = a - bq, q \in
+\mathbb{Z}\}\]</span> Докажем, что <span class="math inline">\(M \ne
+\varnothing\)</span> рассмотрим <span class="math inline">\(q_0 = -|a| -
+1\)</span> <span class="math display">\[z = a - bq_0 = a + b(|a| + 1)
+\ge a + |a| + 1 \ge 1 \Rightarrow z \in \mathbb{N} \Rightarrow z \in
+M\]</span> Следовательно, по аксиоме Архимеда <span
+class="math inline">\(\exists r = \min M = a - bq\)</span>. <span
+class="math display">\[r_1 = r - b = a - b(q + 1), \,\,\,\, b \in
+\mathbb{N} \Rightarrow r_1 &lt; r \Rightarrow r_1 \not\in M \Rightarrow
+\]</span> <span class="math display">\[r_1 \le 0, \,\,\,\, r \ne 0
+\Rightarrow r_1 &lt; 0 \Rightarrow 0 \le r &lt; b
+\,\,\,\,\blacksquare\]</span></p>
+<p><em>Единственность</em>:</p>
+<p>Пусть: <span class="math display">\[ a = bq_0 + r_0\]</span> <span
+class="math display">\[a = bq_1 + r_1 \Rightarrow\]</span> <span
+class="math display">\[0 = b(q_1 - q_0) + (r_1 - r_0) \Rightarrow
+b\,\,|\,\,(r_0 - r_1) \Rightarrow b \le |r_0 - r_1|\]</span> <span
+class="math display">\[0 \le r_0, r_1 \le b - 1 \Rightarrow |r_0 - r_1|
+\le b \Rightarrow r_0 = r_1, \,\,\, q_0 = q_1
+\,\,\,\,\blacksquare\]</span></p>
+<h2 id="нод">НОД</h2>
+<hr />
+<p><strong>Определение:</strong><a name="definition-6"></a> Пусть <span
+class="math inline">\(a, b \in \mathbb{Z},\,\,\,\,\mathcal{D}_{a, b}=
+\{z \in \mathbb{N}: z\,\,|\,\,a, z\,\,|\,\,b\}\)</span>. Тогда <span
+class="math display">\[\mathbf{НОД}(a, b) = \max
+\mathcal{D}\]</span></p>
+<p><strong>Утверждение:</strong><a name="statement-1"></a> (корректность
+определения) <em>Доказательство:</em> очев.</p>
+<p><strong>Лемма:</strong><a name="lemma-1"></a> <span
+class="math display">\[(a, b) = (a, a \pm b)\]</span></p>
+<p><em>Доказательство:</em> <span class="math display">\[\begin{cases}
+z\,\,|\,\,a \\ z\,\,|\,\,b
+\end{cases} \Rightarrow z\,\,|\,\,b \pm a \Rightarrow \mathcal{D}_{a, b}
+\subset \mathcal{D}_{a, b \pm a}\]</span> <span
+class="math display">\[\begin{cases}
+z\,\,|\,\,a \\ z\,\,|\,\,b + a
+\end{cases} \Rightarrow z\,\,|\,\,b \Rightarrow \mathcal{D}_{a, b+a}
+\subset \mathcal{D}_{a, b}\,\,\,\,\blacksquare\]</span></p>
+<h2 id="алгоритм-евклида">Алгоритм Евклида</h2>
+<hr />
+<p><span class="math display">\[a \in \mathbb{Z}, b \in
+\mathbb{N}\]</span> <span class="math display">\[a = bq_0 + r_1,
+\,\,\,\, 0 \le r_1 &lt; b\]</span> <span class="math display">\[b =
+r_1q_1 + r_2, \,\,\,\, 0 \le r_2 &lt; r_1\]</span> <span
+class="math display">\[r_0 = r_2q_2 + r_3, \,\,\,\, 0 \le r_3 \le
+r_2\]</span> <span class="math display">\[\vdots\]</span> <span
+class="math display">\[r_{j - 1} = r_{j}q_{j} + r_{j + 1}, \,\,\,\, 0
+\le r_{j + 1} \le r_j\]</span> <span
+class="math display">\[\vdots\]</span> <span class="math display">\[r_{n
+- 2} = r_{n - 1}q_{n - 1} + r_{n}, \,\,\,\, 0 \le r_{n} \le r_{n -
+1}\]</span> <span class="math display">\[r_{n - 1} = r_{n}q_{n} + r_{n +
+1}, \,\,\,\, r_{n + 1} = 0\]</span> <span class="math display">\[\exists
+n \in \mathbb{N}: r_{n + 1} = 0\]</span></p>
+<p><strong>Утверждение:</strong><a name="statement-2"></a> <span
+class="math inline">\(\mathbf{НОД} (a, b) = r_n\)</span></p>
+<p><em>Доказательство:</em> <span class="math inline">\(\forall j \le n
+(r_{j - 1}, r_j) = (r_j, r_{j + 1}) \,\,\,\,\blacksquare\)</span></p>
+<p><strong>Теорема:</strong><a name="theorem-2"></a> (о линейном
+представлении НОД) Пусть <span class="math inline">\(a, b \in
+\mathbb{Z}, \,\,\,\,\,\, d = (a, b)\)</span>. Тогда <span
+class="math display">\[\exists x, y \in \mathbb{Z}: d = ax +
+by\]</span></p>
+<p><em>Доказательство:</em> Обратный ход алгоритма Евклида <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span>.</p>
+<p><strong>Лемма:</strong><a name="lemma-2"></a>
+(<strong>важная</strong>) <span class="math display">\[\begin{cases}
+a\,\,|\,\,bc \\ (a, b) = 1
+\end{cases} \Rightarrow a\,\,|\,\,c\]</span> <em>Доказательство:</em>
+<span class="math display">\[(a, b) = 1 \Rightarrow \exists x, y \in
+\mathbb{Z}: 1 = ax + by\]</span> <span class="math display">\[acx + bcy
+= c\]</span> <span class="math display">\[\begin{cases}
+a\,\,|\,\,acx \\ a\,\,|\,\,bcy
+\end{cases} \Rightarrow a\,\,|\,\,c \,\,\,\,\blacksquare\]</span></p>
+<h2 id="нок-и-нод-нескольких-чисел">НОК и НОД нескольких чисел</h2>
+<hr />
+<p><strong>Определение:</strong><a name="definition-7"></a> <span
+class="math inline">\(z \in \mathbb{Z}\)</span> - общее кратное чисел
+<span class="math inline">\(a_1, \ldots, a_n\)</span>, если <span
+class="math inline">\(a_j \,\,|\,\,z \forall j\)</span></p>
+<p><strong>Определение:</strong><a name="definition-8"></a> <span
+class="math inline">\(\mathbf{НОК} (a_1, \ldots, a_n) = \min \{z \in
+\mathbb{N} : z\)</span> общее кратное чисел <span
+class="math inline">\(a_1, \ldots, a_n \}\)</span></p>
+<p><strong>Теорема:</strong><a name="theorem-3"></a> Если <span
+class="math inline">\(z_0 - \mathbf{НОК} (a_1, \ldots, a_n)\)</span>, то
+<span class="math inline">\(z_0 \,\,|\,\,z\)</span></p>
+<p><em>Доказательство:</em></p>
+<p><strong>Определение:</strong><a name="definition-9"></a> <span
+class="math inline">\(\mathbf{НОД} (a_1, \ldots, a_n) = \max \{z \in
+\mathbb{N}: z \,\,|\,\,a_j \,\,\,\,\,\, \forall j = 1, \ldots,
+n\}\)</span></p>
+<p><strong>Теорема:</strong><a name="theorem-4"></a> Пусть <span
+class="math inline">\(d\)</span> - общий делитель <span
+class="math inline">\(a_1, \ldots, a_n\)</span>. Тогда <span
+class="math inline">\(d \,\,|\,\,\mathbf{НОД} (a_1, \ldots,
+a_n)\)</span></p>
+<p><em>Доказательство:</em></p>
+<h1 id="конечные-цепные-дроби">Конечные цепные дроби</h1>
+<hr />
+<p><span class="math display">\[\frac{a}{b} \in \mathbb{Q}, \,\,\,\, (a,
+b) = 1\]</span> <span class="math display">\[\frac{a}{b} = A_0 +
+\frac{1}{A_1 + \frac{1}{A_2 + \frac{1}{\ddots
+\frac{1}{A_n}}}}\]</span></p>
+<p><strong>Определение:</strong><a name="definition-10"></a> <span
+class="math inline">\([A_0, \ldots, A_n]\)</span> - разложение числа
+<span class="math inline">\(\frac{a}{b}\)</span> в конечную цепную
+дробь.</p>
+<p><strong>Определение:</strong><a name="definition-11"></a> <span
+class="math inline">\([A_0, \ldots, A_k], \,\,\,\, k \le n\)</span> -
+подходящая дробь для разложения <span
+class="math inline">\(\frac{a}{b}\)</span> в конечную цепную дробь.</p>
+<p><strong>Лемма:</strong><a name="lemma-3"></a> (основная лемма о
+подходящих дробях)</p>
+<ol type="1">
+<li><span class="math display">\[\begin{cases}
+p_{k + 1} = A_{k + 1}p_k + p_{k - 1} \\ q_{k + 1} = A_{k + 1}q_k + q_{k
+- 1}
+\end{cases}\]</span></li>
+<li><span class="math display">\[p_kq_{k-1} - q_kp_{k - 1} = (-1)^{k +
+1}\]</span></li>
+</ol>
+<p><strong>Теорема:</strong><a name="theorem-5"></a> (Перрона) <span
+class="math display">\[\left| \alpha - \frac{p_k}{q_k} \right| =
+\frac{1}{q_k^2(\alpha_{k + 1} + \alpha_{k})} \,\,\,\, \alpha_k =
+[A_k;A_{k - 1};\ldots ;A_1]\]</span></p>
+<h1 id="теория-сравнений">Теория сравнений</h1>
+<hr />
+<p><strong>Определение:</strong><a name="definition-12"></a> <span
+class="math display">\[a, b \in \mathbb{Z} \,\,\,\, m \in \mathbb{N},
+\,\,\,\, m \ge 2\]</span> <span class="math display">\[a \equiv b \mod m
+\,\,\,\, m \,\,|\,\,(a - b)\]</span></p>
+<h2 id="простейшие-свойства-сравнений">Простейшие свойства
+сравнений</h2>
+<ol type="1">
+<li><span class="math inline">\(\,\,\,\,a \equiv a \mod m\)</span><br>
+<span class="math inline">\(\,\,\,\,a \equiv b \mod m \Rightarrow b
+\equiv a \mod m\)</span><br> <span class="math inline">\(\begin{cases} a
+\equiv b \mod m \\ b \equiv c \mod m \end{cases} \Rightarrow a \equiv c
+\mod m\)</span><br><br></li>
+<li><span class="math inline">\(\begin{cases} a \equiv b \mod m \\ c
+\equiv d \mod m \end{cases} \Rightarrow a \pm b \equiv c \pm d \mod
+m\)</span><br><br></li>
+<li><span class="math inline">\(\begin{cases} a \equiv b \mod m \\ c
+\equiv d \mod m \end{cases} \Rightarrow ac \equiv bd \mod
+m\)</span><br><br></li>
+<li><span class="math inline">\(\begin{cases} a \equiv b \mod m \\
+d\,\,|\,\,a \\ d\,\,|\,\,b \\ d\,\,|\,\,m \end{cases} \Rightarrow
+\frac{a}{d} \equiv \frac{b}{d} \mod \frac{m}{d}\)</span><br><br> 4*.
+<span class="math inline">\(ad \equiv bd \mod md \Rightarrow a \equiv b
+\mod m\)</span><br><br></li>
+<li><span class="math inline">\(\begin{cases} ad \equiv bd \mod m \\ (d,
+m) = 1 \end{cases} \Rightarrow a \equiv b \mod m\)</span><br><br></li>
+<li>Пусть <span class="math inline">\((a, m) = 1\)</span>. Тогда <span
+class="math inline">\(\exists x \in \mathbb{Z}:\)</span>
+<ol type="a">
+<li><span class="math inline">\(ax \equiv 1 \mod m\)</span></li>
+<li><span class="math inline">\(\begin{cases} ax_1 \equiv 1 \mod m \\
+ax_2 \equiv 1 \mod m \end{cases} \Rightarrow x_1 \equiv x_2 \mod
+m\)</span><br><br></li>
+</ol></li>
+<li>Если <span class="math inline">\((a, m) = 1\)</span>, то <span
+class="math inline">\(\forall b \,\,\,\, \exists ! \,\, x: ax \equiv b
+\mod m\)</span></li>
+</ol>
+<h2 id="функция-эйлера">Функция Эйлера</h2>
+<hr />
+<p><strong>Определение:</strong><a name="definition-13"></a> <span
+class="math inline">\(\varphi (m)=\)</span> количество элементов в
+множестве <span class="math inline">\(\{x \in \mathbb{N}, x \le m, (x,
+m) = 1\}\)</span></p>
+<h2 id="теорема-эйлера">Теорема Эйлера</h2>
+<p><strong>Теорема:</strong><a name="theorem-6"></a> Пусть <span
+class="math inline">\((a, m) = 1\)</span>. Тогда <span
+class="math display">\[a^{\varphi(m)} \equiv 1 \mod m\]</span></p>
+<p><em>Доказательство:</em></p>
+<p><strong>Следствие:</strong><a name="corollary-5"></a> Если <span
+class="math inline">\(p\)</span> - простое, то: <span
+class="math display">\[a^{p - 1} \equiv 1 \mod p\]</span></p>
+<h2 id="классы-вычетов">Классы вычетов</h2>
+<hr />
+<p><span class="math inline">\(m \ge 2, \,\,\,\, m \in
+\mathbb{N}\)</span></p>
+<p><strong>Определение:</strong><a name="definition-15"></a> Класс
+вычетов <span class="math inline">\(a\)</span> по модулю <span
+class="math inline">\(m\)</span><br> <span
+class="math inline">\(\overline{a} = \{x \in \mathbb{Z}: x \equiv a \mod
+m\}\)</span><br> <span class="math inline">\(\overline{a} + \overline{b}
+= \overline{a_0 + b_0} \,\,\,\, a_0 \in \overline{a}, \,\, b_0 \in
+\overline{b}\)</span><br> <span class="math inline">\(\overline{a} \cdot
+\overline{b} = \overline{a_0 \cdot b_0} \,\,\,\, a_0 \in \overline{a},
+\,\, b_0 \in \overline{b}\)</span></p>
+<p><em>Доказательство: корректности</em></p>
+<p><strong>Определение:</strong><a name="definition-16"></a> класс <span
+class="math inline">\(\overline{a}\)</span> вычетов по модулю <span
+class="math inline">\(m\)</span> называется обратимым, если:</p>
+<ol type="1">
+<li><span class="math inline">\(\exists \,\, a_1 \in \overline{a}: (a_1,
+m) = 1\)</span></li>
+<li><span class="math inline">\(\forall \,\, a_1 \in \overline{a}: (a_1,
+m) = 1\)</span></li>
+<li><span class="math inline">\(\exists \,\, b \in \mathbb{Z}:
+\overline{a} \cdot \overline{b} = \overline{1}\)</span></li>
+</ol>
+<p><em>Доказательство:</em> (эквивалентности 1. 2. 3.)</p>
+<p><strong>Определение:</strong><a name="definition-17"></a> <span
+class="math inline">\(B \subset \mathbb{Z}\)</span> - полная система
+вычетов по модулю <span class="math inline">\(m\)</span>, если <span
+class="math inline">\(B\)</span> содержит ровно по одному числу из
+каждого класса вычетов по модулю <span
+class="math inline">\(m\)</span>.</p>
+<p><strong>Определение:</strong><a name="definition-18"></a> <span
+class="math inline">\(B^* \subset \mathbb{Z}\)</span> - приведенная
+система вычетов по модулю <span class="math inline">\(m\)</span>, если
+<span class="math inline">\(B^*\)</span> содержит ровно по одному числу
+из каждого обратимого класса вычетов по модулю <span
+class="math inline">\(m\)</span>.</p>
+<p><em>Замечание:</em> <span class="math inline">\(\forall B \,\,\,\,
+|B| = m\)</span><br> <span class="math inline">\(\forall B^* \,\,\,\,
+|B^* | = \varphi(m)\)</span><br></p>
+<p><strong>Утверждение:</strong><a name="statement-3"></a> Пусть <span
+class="math inline">\(B\)</span> обладает свойствами:</p>
+<ol type="1">
+<li>Все элементы <span class="math inline">\(B\)</span> различны по
+модулю <span class="math inline">\(m\)</span>.</li>
+<li><span class="math inline">\(\forall x \in \mathbb{Z} \,\,\,\,
+\exists b \in B: x \equiv b \mod m\)</span></li>
+</ol>
+<p>Тогда <span class="math inline">\(B\)</span> - полная система вычетов
+по модулю <span class="math inline">\(m\)</span>.</p>
+<p><em>Доказательство:</em></p>
+<p><strong>Утверждение:</strong><a name="statement-4"></a> Пусть <span
+class="math inline">\(B^*\)</span> обладает свойствами:</p>
+<ol type="1">
+<li>Все элементы <span class="math inline">\(B^*\)</span> различны по
+модулю <span class="math inline">\(m\)</span>.</li>
+<li><span class="math inline">\(\forall b \in B^* \,\,\,\,(b, m) =
+1\)</span></li>
+<li><span class="math inline">\(\forall x \in \mathbb{Z}:(x, m) = 1
+\,\,\,\, \exists b \in B^*: x \equiv b \mod m\)</span></li>
+</ol>
+<p>Тогда <span class="math inline">\(B^*\)</span> - приведенная система
+вычетов по модулю <span class="math inline">\(m\)</span>.</p>
+<p><em>Доказательство:</em></p>
+<p><strong>Теорема:</strong><a name="theorem-8"></a> Пусть <span
+class="math inline">\((m, n) = 1\)</span><br> <span
+class="math inline">\(B_1\)</span> - полная система вычетов по модулю
+<span class="math inline">\(m\)</span>.<br> <span
+class="math inline">\(B_2\)</span> - полная система вычетов по модулю
+<span class="math inline">\(n\)</span>.<br> <span
+class="math inline">\(B = \{xn + ym, \,\,\,\, x \in B_1, \,\,\,\, y \in
+B_2\}\)</span>.<br> Тогда <span class="math inline">\(B\)</span> -
+полная система вычетов по модулю <span
+class="math inline">\(mn\)</span></p>
+<p><em>Доказательство:</em></p>
+<p><strong>Теорема:</strong><a name="theorem-9"></a> Пусть <span
+class="math inline">\((m, n) = 1\)</span><br> <span
+class="math inline">\(B_1^*\)</span> - полная система вычетов по модулю
+<span class="math inline">\(m\)</span>.<br> <span
+class="math inline">\(B_2^*\)</span> - полная система вычетов по модулю
+<span class="math inline">\(n\)</span>.<br> <span
+class="math inline">\(B^* = \{xn + ym, \,\,\,\, x \in B_1^*, \,\,\,\, y
+\in B_2^*\}\)</span>.<br> Тогда <span class="math inline">\(B^*\)</span>
+- полная система вычетов по модулю <span
+class="math inline">\(mn\)</span></p>
+<p><em>Доказательство:</em></p>
+<p><strong>Следствие:</strong><a name="corollary-1"></a>
+(мультипликативность функции Эйлера) <span
+class="math display">\[\begin{cases}
+|B_1^*| = \varphi(m) \\ |B_2^*| = \varphi(n)
+\end{cases} \Rightarrow |B^*| = \varphi(mn)\]</span></p>
+<p><strong>Следствие:</strong><a name="corollary-2"></a> Если <span
+class="math inline">\(m = p_1^{\alpha_1} \cdot \ldots \cdot
+p_t^{\alpha_t}, p_i\)</span>-простое <span class="math inline">\(\forall
+i\)</span><br> <span class="math display">\[\varphi(m) = m(1 -
+\frac{1}{p_1})\cdot \ldots \cdot (1 - \frac{1}{p_t})\]</span></p>
+<p><em>Доказательство:</em> <span class="math inline">\(\varphi(p) = p -
+1\)</span>, если <span class="math inline">\(p\)</span> - простое.<br>
+<span class="math inline">\(\varphi(p^{\alpha}) = p^{\alpha} - p^{\alpha
+- 1} = p^{\alpha}(1 - \frac{1}{p})\)</span><br> Далее используем <a
+href="#corollary-1">следствие 1</a>.</p>
+<h2 id="простые-числа">Простые числа</h2>
+<hr />
+<p><strong>Определение:</strong><a name="definition-19"></a> <span
+class="math inline">\(n \in \mathbb{N}\)</span> - простое, если имеет
+ровно 2 делителя <span class="math inline">\(1\)</span> и <span
+class="math inline">\(n\)</span>.</p>
+<p><strong>Определение:</strong><a name="definition-20"></a> <span
+class="math inline">\(n \in \mathbb{N} \,\,\,\, n &gt; 1\)</span> -
+составное, если оно не простое.</p>
+<blockquote>
+<p><span class="math inline">\(1\)</span> не составное и не простое.</p>
+</blockquote>
+<p><strong>Теорема:</strong><a name="theorem-9"></a> Пусть <span
+class="math inline">\(a &gt; 1 \,\,\,\, a \in \mathbb{Z}\)</span>. Тогда
+наименьший делитель <span class="math inline">\(c\)</span> числа <span
+class="math inline">\(a\)</span> неравный <span
+class="math inline">\(1\)</span> - простое число.</p>
+<p><em>Доказательство:</em></p>
+<p><strong>Теорема:</strong><a name="theorem-10"></a> Множество простых
+чисел бесконечно.</p>
+<p><em>Доказательство:</em> (от противного)</p>
+<p><strong>Теорема:</strong><a name="theorem-11"></a> Пусть <span
+class="math inline">\(a, b \in \mathbb{Z}\)</span>, <span
+class="math inline">\(p\)</span> - простое, <span
+class="math inline">\(p \,\,|\,\, ab\)</span>. Тогда <span
+class="math inline">\(p \,\,|\,\, a\)</span> или <span
+class="math inline">\(p \,\,|\,\, b\)</span>.</p>
+<p><em>Доказательство:</em></p>
+<p><strong>Теорема:</strong><a name="theorem-12"></a> (основная теорема
+арифметики) Всякое <span class="math inline">\(n \in \mathbb{N} \,\,\,\,
+n &gt; 1\)</span> раскладывается в произведение простых сомножителей
+единственным образом.</p>
+<p><em>Доказательство:</em></p>
+<h4
+id="каноническая-запись-разложения-числа-на-простые-сомножители">Каноническая
+запись разложения числа на простые сомножители</h4>
+<p><span class="math inline">\(n = p_1^{\alpha_1} \cdot \ldots \cdot
+p_k^{\alpha_k}\)</span>, где <span class="math inline">\(\forall i \ne j
+\,\,\,\, 1 \le i, j \le k \,\,\,\, p_i \ne p_j \,\,\,\, \alpha_i \in
+\mathbb{N} \,\,\,\, \alpha_i \ge 1\)</span>.</p>
+<p><strong>Теорема:</strong><a name="theorem-13"></a> Наименьший простой
+делитель <span class="math inline">\(p\)</span> составного числа <span
+class="math inline">\(n\)</span> не больше <span
+class="math inline">\(\sqrt{n}\)</span>.</p>
+<p><em>Доказательство:</em></p>
+<h4 id="решето-эратосфена">Решето Эратосфена</h4>
+<p><strong>Лемма:</strong><a name="lemma-4"></a><span
+class="math display">\[\ln(N + 1) \le \displaystyle \sum_{n =
+1}^{N}\frac{1}{n}\]</span></p>
+<p><em>Доказательство:</em> <span class="math inline">\(\ln(1 + t) \le
+t\)</span> по теореме Лагранжа.<br> Рассмотрим <span
+class="math inline">\(t = \frac{1}{n} \Rightarrow\)</span> <span
+class="math inline">\(\ln(n + 1) - \ln(n) = \ln(\frac{n + 1}{n}) = \ln(1
++ \frac{1}{n}) \le \frac{1}{n}\)</span><br> Суммируя по натуральным
+числам от <span class="math inline">\(1\)</span> до <span
+class="math inline">\(n\)</span>, получаем:<br> <span
+class="math display">\[\displaystyle \sum_{n = 1}^{N}\ln(n + 1) - \ln(n)
+\le \displaystyle \sum_{n = 1}^{N}\frac{1}{n} \Rightarrow\]</span> <span
+class="math display">\[\ln(N + 1) \le \displaystyle \sum_{n =
+1}^{N}\frac{1}{n} \,\,\,\,\blacksquare\]</span></p>
+<p><strong>Теорема:</strong><a name="theorem-14"></a> При любом <span
+class="math inline">\(x \ge 2\)</span> справедливо неравенство: <span
+class="math display">\[\displaystyle \sum_{p \le x}^{}\frac{1}{p} \ge
+\ln(\ln(x)) - 1\]</span></p>
+<p><em>Доказательство:</em> Пусть <span class="math inline">\(k\)</span>
+удовлетворяет условию: <span class="math inline">\(2^k \le x \le 2^{k +
+1}\)</span>. Тогда<br> <span class="math inline">\(\forall n \le x,
+\,\,\,\,\,\,\,\, n = p_1^{\alpha_1} \cdot \ldots \cdot p_r^{\alpha_r},
+\,\,\,\, p_i \le x, \,\,\,\, \alpha_i \le k\)</span>. Рассмотрим <span
+class="math inline">\(\displaystyle \prod_{p \le x}\left(1 -
+\frac{1}{p}\right)^{-1} = \displaystyle \prod_{p \le x}\frac{1}{\left(1
+- \frac{1}{p}\right)} = \displaystyle \prod_{p \le x}\left(1 +
+\frac{1}{p} + \frac{1}{p^2} + \ldots\right)=\)</span><br> <span
+class="math inline">\(= \displaystyle \prod_{p \le x}\left(1 +
+\frac{1}{p} + \frac{1}{p^2} + \ldots + \frac{1}{p^k}\right) = 1 +
+\displaystyle \sum_{n}’ \frac{1}{n} \ge 1 + \displaystyle \sum_{n \le x}
+\frac{1}{n} \ge \displaystyle \sum_{n \le x} \frac{1}{n} \ge
+\ln(x)\)</span></p>
+<p><span class="math inline">\(\ln\left(1 - \frac{1}{p}\right)^{-1} =
+\ln\left(1 + \frac{1}{p - 1}\right) \le \frac{1}{p - 1}\)</span><br>
+Суммируя, получаем: <span class="math inline">\(\ln \displaystyle
+\prod_{p \le x}\left(1 - \frac{1}{p}\right)^{-1} \le \displaystyle
+\sum_{p \le x}\frac{1}{p - 1} = \displaystyle \sum_{p \le x}\frac{1}{p}
++ \sum_{p \le x}\frac{1}{p - 1} - \frac{1}{p} \le \displaystyle \sum_{p
+\le x}\frac{1}{p} + 1 \,\,\,\,\blacksquare\)</span></p>
+<p><strong>Определение:</strong><a name="definition-21"></a>(количество
+простых меньших <span class="math inline">\(x\)</span>) <span
+class="math display">\[\pi(x) = \displaystyle \sum_{p \le
+x}^{}1\]</span></p>
+<p><strong>Определение:</strong><a name="definition-22"></a> (функция
+Мёбиуса) <span class="math display">\[\mu(n) = \begin{cases} 1,\,\,\,\,
+n = 1 \\
+0,\,\,\,\, n = p^2m,\,\,\,\, p - простое \\
+(-1)^k,\,\,\,\, n = p_1 \cdot \ldots \cdot p_k \end{cases}\]</span></p>
+<p><strong>Обозначение:</strong> <span
+class="math inline">\(\displaystyle \sum_{d \,\,|\,\, n}\)</span> -
+сумма по всем делителям числа <span class="math inline">\(n\)</span>,
+включая <span class="math inline">\(n\)</span> и <span
+class="math inline">\(1\)</span>.</p>
+<p><strong>Определение:</strong><a name="definition-23"></a> <span
+class="math display">\[\tau(n) = \displaystyle \sum_{d \,\,|\,\,
+n}1\]</span></p>
+<p><strong>Определение:</strong><a name="definition-24"></a> <span
+class="math display">\[\sigma(n) = \displaystyle \sum_{d \,\,|\,\,
+n}d\]</span></p>
+<p><strong>Теорема:</strong><a name="theorem-10"></a> (основное свойство
+функции Мёбиуса) <span class="math display">\[\displaystyle \sum_{d
+\,\,|\,\, n}\mu(n) = \begin{cases} 1,\,\,\,\, n = 1 \\
+0,\,\,\,\, n \ne 1 \end{cases}\]</span></p>
+<p><em>Доказательство:</em></p>
+<p><strong>Следствие:</strong><a name="corollary-3"></a> Пусть <span
+class="math inline">\(a, b \in \mathbb{N}\)</span> <span
+class="math display">\[\displaystyle \sum_{d \,\,|\,\, (a, b)}\mu(n) =
+\begin{cases} 1,\,\,\,\, (a, b) = 1 \\
+0,\,\,\,\, (a, b) \ne 1 \end{cases}\]</span></p>
+<p><strong>Теорема:</strong><a name="theorem-11"></a> Если <span
+class="math inline">\(x\)</span> достаточно велико, то <span
+class="math display">\[\pi(x) \le \frac{2x}{\ln\ln(x)}\]</span></p>
+<p><em>Доказательство:</em></p>
+<h2 id="китайская-теорема-об-остатках">Китайская теорема об
+остатках</h2>
+<hr />
+<p>Рассмотрим сравнения: <span class="math display">\[\begin{cases} x
+\equiv a_1 \mod m_1 \\
+\vdots \\
+x \equiv a_k \mod m_k \end{cases}\]</span> <span
+class="math display">\[(m_i, m_j) = 1 \,\,\,\,\,\,\,\, \forall i \ne
+j\]</span> <span class="math display">\[m_i \in \mathbb{N}
+\,\,\,\,\,\,\,\, a_i \in \mathbb{Z}\]</span></p>
+<p><strong>Теорема:</strong><a name="theorem-12"></a> <span
+class="math display">\[x_0 = M_1x_1 + \ldots + M_kx_k\]</span> <span
+class="math inline">\(M = m_1 \cdot \ldots \cdot m_k,\,\,\,\, M_i =
+\frac{M}{m_i},\,\,\,\,\)</span> <span class="math inline">\(x_i\)</span>
+- решение сравнения <span class="math inline">\(M_ix_i \equiv a_i \mod
+m_i\)</span> - является решением системы сравнений, приведенной
+выше.</p>
+<p><em>Доказательство:</em></p>
+<p><strong>Следствие:</strong><a name="corollary-4"></a> Если <span
+class="math inline">\(f(x) = a_nx^n + a_{n - 1}x^{n - 1} + \ldots +
+a_0\)</span> - полином с целыми коэффицентами, <span
+class="math inline">\(J(f, m)\)</span> - число решений сравнения <span
+class="math inline">\(f(x) \equiv 0 \mod m\)</span>, то функция <span
+class="math inline">\(J(f, m)\)</span> мультипликативна при
+фиксированном <span class="math inline">\(f\)</span>.</p>
+<p><em>Доказательство:</em></p>
+<h2 id="сравнения-с-одним-неизвестным">Сравнения с одним
+неизвестным</h2>
+<hr />
+<p>Рассмотрим сравнение <span class="math inline">\(ax \equiv b \mod
+m\)</span>, где <span class="math inline">\((a, m) = 1\)</span>.</p>
+<p><strong>Теорема:</strong><a name="theorem-15"></a> <span
+class="math inline">\((-1)^{n}bp_{n - 1}\)</span> - является решением
+сравнения, приведенного выше.</p>
+<p><em>Доказательство:</em> <span class="math inline">\(p_nq_{n - 1} -
+p_{n - 1}q_n = (-1)^{n}, \,\,\,\,\,\,\,\, \frac{p_n}{q_n} = \frac{m}{a}
+\Rightarrow mq_{n - 1} - p_{n - 1}a = (-1)^{n} \Rightarrow\)</span><br>
+<span class="math inline">\((-1)^{n}bmq_{n - 1} - (-1)^{n}bp_{n - 1}a =
+b \Rightarrow (-1)^{n - 1}bp_{n - 1}a \equiv b \mod m
+\,\,\,\,\blacksquare\)</span></p>
+<p><strong>Теорема:</strong><a name="theorem-16"></a> <span
+class="math inline">\(a^{\varphi(m) - 1}b\)</span> - является решением
+сравнения, приведенного выше.</p>
+<p><em>Доказательство:</em> <span class="math inline">\((a, m) = 1
+\Rightarrow\)</span> по <a href="#theorem-6">теореме Эйлера</a> <span
+class="math inline">\(a^{\varphi(m)} \equiv 1 \mod m
+\Rightarrow\)</span><br> <span class="math inline">\(ax \equiv
+a^{\varphi(m)}b \mod m \Rightarrow x \equiv a^{\varphi(m) - 1}b \mod m
+\,\,\,\,\blacksquare\)</span></p>
+<h3 id="случай-не-взаимно-простых-a-и-m">Случай не взаимно простых <span
+class="math inline">\(a\)</span> и <span
+class="math inline">\(m\)</span></h3>
+<p>Пусть <span class="math inline">\((a, m) = d \Rightarrow a = a_1d,
+\,\,\,\,\,\,\,\, m = m_1d \Rightarrow a_1dx \equiv b \mod m_1d
+\Rightarrow\)</span>:</p>
+<ol type="1">
+<li><span class="math inline">\(d \nmid b\)</span> - нет решений.</li>
+<li><span class="math inline">\(d \,\,|\,\, b \Rightarrow b = b_1d
+\Rightarrow a_1x \equiv b_1 \mod m_1\)</span><br> Пусть <span
+class="math inline">\(x_0\)</span> - решение этого сравнения. Тогда
+классы вычетов <span class="math inline">\(x_0, x_0 + m_1, \ldots, x_0(d
+- 1)m_1\)</span> по модулю <span class="math inline">\(m\)</span>
+являются решениями сравнения <span class="math inline">\(ax \equiv b
+\mod m\)</span>. То есть сравнение <span class="math inline">\(ax \equiv
+b \mod m\)</span> имеет <span class="math inline">\(d = (a, m)\)</span>
+- решений.</li>
+</ol>
+<h2 id="полиномиальные-сравнения">Полиномиальные сравнения</h2>
+<hr />
+<p>Рассмотрим полином: <span class="math display">\[f(x) = a_nx^n + a_{n
+- 1}x^{n - 1} + \ldots + a_0 \,\,\,\,(17)\]</span>
+<a name="equation-17"></a></p>
+<p><strong>Теорема:</strong><a name="theorem-17"></a> Полиномиальное
+сравнение степени <span class="math inline">\(n\)</span> по простому
+модулю <span class="math inline">\(p\)</span> равносильно некоторому
+сравнению степени не выше <span class="math inline">\(p -
+1\)</span>.</p>
+<p><em>Доказательство:</em> Поделим <span
+class="math inline">\(f(x)\)</span> на <span class="math inline">\(x^p -
+x\)</span> с отстатком: <span class="math display">\[f(x) = (x^p -
+x)g(x) + r(x)\]</span> Степень <span class="math inline">\(deg(r(x))
+&lt; p\)</span>, по <a href="#corollary-5">малой теореме Ферма</a> <span
+class="math inline">\(x^p - x \equiv 1 \mod p
+\,\,\,\,\blacksquare\)</span></p>
+<p><strong>Теорема:</strong><a name="theorem-18"></a> Если <span
+class="math inline">\(f(x) \equiv 0 \mod p\)</span>(<span
+class="math inline">\(p\)</span> - простое) имеет более чем <span
+class="math inline">\(n\)</span> решений, то все коэффиценты <span
+class="math inline">\(f(x)\)</span> делятся на <span
+class="math inline">\(p\)</span>.</p>
+<p><em>Доказательство:</em></p>
+<p><strong>Теорема:</strong><a name="theorem-19"></a> (Вильсона)<span
+class="math inline">\(p\)</span> - простое <span
+class="math inline">\(\Rightarrow\)</span> <span
+class="math display">\[(p - 1)! + 1 \equiv 0 \mod p\]</span></p>
+<p><em>Доказательство:</em> Рассмотрим <span class="math inline">\(f(x)
+= (x - 1)(x - 2) \cdot \ldots \cdot (x - (p - 1)) - (x^{p - 1} -
+1)\)</span>.<br> Его степень не выше <span class="math inline">\(p -
+2\)</span>, но вычеты <span class="math inline">\(1, \ldots, p -
+1\)</span> являются решениями сравнения <span
+class="math inline">\(\Rightarrow\)</span> по <a
+href="#theorem-18">теореме</a> все коэффиценты <span
+class="math inline">\(f(x)\)</span> делятся на <span
+class="math inline">\(p\)</span>. Свободный член <span
+class="math inline">\((-1)^{p - 1}(p - 1)! + 1
+\,\,\,\,\blacksquare\)</span></p>
+<h3 id="метод-подъёма-решения">Метод “подъёма” решения</h3>
+<hr />
+<p><strong>Теорема:</strong><a name="theorem-20"></a> (Лемма Гензеля)
+Пусть <span class="math inline">\(p\)</span> - простое, <span
+class="math inline">\(f(x) \in \mathbb{Z}[x]\)</span>, <span
+class="math inline">\(f(x_1) \equiv 0 \mod p \,\,\,\,\)</span>, <span
+class="math inline">\(f’(x_1) \not\equiv 0 \mod p\)</span>. Тогда в
+полной системе вычетов по модулю <span class="math inline">\(p^k,
+\,\,\,\, k \in \mathbb{N}\)</span> существует только один элемент <span
+class="math inline">\(x_k\)</span>, удовлетворяющий условиям: <span
+class="math inline">\(x_k \equiv x_1 \mod p, \,\,\,\,\,\,\,\, f(x_k)
+\equiv 0 \mod p^k\)</span>.</p>
+<p><em>Доказательство:</em> (индукция по степени <span
+class="math inline">\(k\)</span>) Для <span class="math inline">\(k =
+1\)</span> верно по <a href="#definition-17">определению полной системы
+вычетов</a>. Докажем для <span class="math inline">\(k\)</span>,
+пользуясь тем, что для <span class="math inline">\(k - 1\)</span> верно.
+<span class="math inline">\(f(x_k) \equiv 0 \mod p^k \Rightarrow f(x_k)
+\equiv 0 \mod p^{k - 1}\)</span>. Т.к. по модулю <span
+class="math inline">\(p^{k - 1}\)</span> существует единственное
+решение, <span class="math inline">\(x_k \equiv x_{k - 1} \mod p^{k - 1}
+\Rightarrow x_k = x_{k - 1} + t \cdot p^{k - 1}\)</span>. <span
+class="math display">\[f(x_{k - 1} + t \cdot p^{k - 1}) = f(x_{k - 1}) +
+f’(x_{k - 1})t \cdot p^{k - 1} + \ldots \equiv f(x_{k - 1}) + f’(x_{k -
+1})t \cdot p^{k - 1} \mod p^{k} \Rightarrow\]</span> <span
+class="math display">\[f(x_{k - 1}) + f’(x_{k - 1})t \cdot p^{k - 1}
+\equiv 0 \mod p^{k}\]</span> <span class="math inline">\(f(x_{k - 1})
+\equiv 0 \mod p^{k - 1}\)</span>, поэтому можем поделить на <span
+class="math inline">\(p^{k - 1}\)</span>: <span
+class="math display">\[\frac{f(x_{k - 1})}{p^{k - 1}} + f’(x_{k - 1})t
+\equiv 0 \mod p\]</span> это сравнение имеет единственное решение, т.к.
+<span class="math inline">\(f’(x_{k - 1}) \equiv f’(x_1) \not\equiv 0
+\mod p \,\,\,\,\blacksquare\)</span></p>
+<h2 id="сравнения-второй-степени">Сравнения второй степени</h2>
+<hr />
+<p>Рассмотрим сравнение <span class="math inline">\(x^n \equiv a \mod m,
+\,\,\,\, (a, m) = 1\)</span></p>
+<p><strong>Определение:</strong><a name="definition-25"></a> Если
+сравнение, написанное выше, имеет решение, то <span
+class="math inline">\(a\)</span> - вычет <span
+class="math inline">\(n\)</span>-й степени.</p>
+<blockquote>
+<p><span class="math inline">\(n = 2\)</span> квадратичный вычет <span
+class="math inline">\(n = 3\)</span> кубический вычет</p>
+</blockquote>
+<p><strong>Теорема:</strong><a name="theorem-21"></a> Если <span
+class="math inline">\(a, \,\,\,\, a \ne 0\)</span> - квадратичный вычет,
+то сравнение <span class="math inline">\(x^2 \equiv a \mod p, \,\,\,\, p
+\ge 3, \,\,\,\, p\)</span> - простое имеет ровно <span
+class="math inline">\(2\)</span> решения.</p>
+<p><em>Доказательство:</em></p>
+<p><strong>Теорема:</strong><a name="theorem-22"></a> Пусть <span
+class="math inline">\(p \ge 3, \,\,\,\, p\)</span> - простое. Тогда по
+модулю <span class="math inline">\(p\)</span> существует ровно <span
+class="math inline">\(\frac{p - 1}{2}\)</span> - квадратичных вычетов и
+столько же квадратичных невычетов. При этом квадратичные вычеты сравнимы
+по модулю <span class="math inline">\(p\)</span> с числами: <span
+class="math inline">\(1^2, 2^2, \ldots, \left(\frac{p -
+1}{2}\right)\)</span></p>
+<p><em>Доказательство:</em></p>
+<h3 id="символ-лежандра">Символ Лежандра</h3>
+<p><strong>Определение:</strong><a name="definition-26"></a> (Символ
+Лежандра) <span class="math inline">\(a \in \mathbb{Z}, \,\,\,\, p \ge
+3, \,\,\,\,p\)</span> - простое. <span
+class="math display">\[\left(\frac{a}{p}\right) = \begin{cases} -1,
+\,\,\,\, (a, p) = 1, \,\,\,\, a - квадратичный \,\,\,\, невычет \,\,\,\,
+по \,\,\,\, модулю \,\,\,\, p \\
+\,\,\,\,\,0, \,\,\,\, p \,\,|\,\, a \\
+\,\,\,\,\,1, \,\,\,\, (a, p) = 1, \,\,\,\, a - квадратичный \,\,\,\,
+вычет \,\,\,\,по \,\,\,\, модулю \,\,\,\, p \end{cases}\]</span></p>
+<p><strong>Теорема:</strong><a name="theorem-23"></a> (Свойства символа
+Лежандра)</p>
+<ol type="1">
+<li>(Критерий Эйлера) <span class="math inline">\(a^{\frac{p - 1}{2}}
+\equiv \left(\frac{a}{p}\right) \mod p\)</span></li>
+<li>Если <span class="math inline">\(a \equiv b \mod p\)</span>, то
+<span class="math inline">\(\left(\frac{a}{p}\right) =
+\left(\frac{b}{p}\right)\)</span></li>
+<li><span class="math inline">\(\left(\frac{1}{p}\right) =
+1\)</span></li>
+<li><span class="math inline">\(\left(\frac{-1}{p}\right) =
+(-1)^{\frac{p - 1}{2}}\)</span></li>
+<li><span class="math inline">\(\left(\frac{ab}{p}\right) =
+\left(\frac{a}{p}\right) \cdot \left(\frac{b}{p}\right)\)</span></li>
+<li><span class="math inline">\(\left(\frac{a^2}{p}\right) =
+1\)</span></li>
+<li><span class="math inline">\(\displaystyle \sum_{a =
+1}^{p}\left(\frac{a}{p}\right) = 0\)</span></li>
+</ol>
+<h3 id="квадратичный-закон-взаимности">Квадратичный закон
+взаимности</h3>
+<p><strong>Лемма:</strong><a name="lemma-5"></a>(Лемма Гаусса) Пусть
+<span class="math inline">\(p \ne 2, \,\,\,\, p\)</span> - простое,
+<span class="math inline">\(p \nmid a\)</span>. Тогда <span
+class="math display">\[\left(\frac{a}{p}\right) = \varepsilon_1 \cdot
+\ldots \cdot \varepsilon_k\]</span> <span class="math inline">\(ka
+\equiv \varepsilon_kr_k \mod p, \,\,\,\, 1 \le r_k \le \frac{p - 1}{2},
+\,\,\,\, \varepsilon_k = \pm 1, \,\,\,\, k = 1, \ldots, \frac{p -
+1}{2}\)</span>.</p>
+<p><em>Доказательство:</em> Пусть <span class="math inline">\(r_k \equiv
+r_l \mod p \Rightarrow ka \equiv \varepsilon_kr_k \mod p\)</span> и
+<span class="math inline">\(la \equiv \varepsilon_lr_l \mod p
+\Rightarrow ka \equiv \pm la \mod p \Rightarrow p \,\,|\,\, \mp(k -
+l)\)</span>, что невозможно, т.к. <span class="math inline">\(|\mp(k -
+l)| \le p \Rightarrow\)</span> все <span
+class="math inline">\(r_k\)</span> различны. Значит <span
+class="math inline">\(\{r_1, \ldots, r_k\} = \{1, \ldots, \frac{p -
+1}{2}\}\)</span>, перемножая все <span class="math inline">\(ka \equiv
+\varepsilon_kr_k \mod p\)</span>, получаем <span
+class="math inline">\(a^{\frac{p - 1}{2}} \equiv \varepsilon_1 \cdot
+\ldots \cdot \varepsilon_k \mod p\)</span>. Т.к. модуль раности правой и
+левой частей сравнения <span class="math inline">\(\le 2\)</span> <span
+class="math display">\[a^{\frac{p - 1}{2}} = \varepsilon_1 \cdot \ldots
+\cdot \varepsilon_k \mod p \,\,\,\,\blacksquare\]</span></p>
+<p><strong>Следствие:</strong><a name="corollary-6"></a></p>
+<ol type="1">
+<li>Пусть <span class="math inline">\(a\)</span> - нечетное, <span
+class="math inline">\(S = \displaystyle \sum_{x = 1}^{\frac{p -
+1}{2}}\left[\frac{ax}{p}\right]\)</span>. Тогда <span
+class="math inline">\(\left(\frac{a}{p}\right) = (-1)^S\)</span></li>
+<li><span class="math display">\[\left(\frac{2}{p}\right) =
+(-1)^\frac{p^2 - 1}{8}\]</span></li>
+</ol>
+<p><em>Доказательство:</em> <span class="math inline">\(ax -
+p\left[\frac{ax}{p}\right] = \begin{cases} r_x, \,\,\,\, \varepsilon_x =
+1 \\ p - r_x, \,\,\,\, \varepsilon_x = -1 \end{cases}\)</span>, суммируя
+по <span class="math inline">\(1, \ldots, \frac{p - 1}{2}\)</span>,
+получаем: <span class="math inline">\(\left(\frac{p^2 - 1}{8}\right)a -
+p \displaystyle \sum_{x = 1}^{\frac{p - 1}{2}}\left[\frac{ax}{p}\right]
+= pt + \displaystyle \sum_{x = 1}^{\frac{p - 1}{2}}\varepsilon_xr_x,
+\,\,\,\, t\)</span> - количество <span class="math inline">\(-1\)</span>
+среди <span class="math inline">\(\varepsilon_x\)</span>. Переходя к
+сравнению по модулю <span class="math inline">\(2\)</span>, заметив, что
+<span class="math inline">\(p \equiv -1 \mod 2\)</span>, <span
+class="math inline">\(\varepsilon \equiv 1 \mod 2 \Rightarrow
+\displaystyle \sum_{x = 1}^{\frac{p - 1}{2}}\varepsilon_xr_x \equiv
+\displaystyle \sum_{x = 1}^{\frac{p - 1}{2}}r_x = \left(\frac{p^2 -
+1}{8}\right)\)</span>, получаем: <span
+class="math display">\[\left(\frac{p^2 - 1}{8}\right)a + \displaystyle
+\sum_{x = 1}^{\frac{p - 1}{2}}\left[\frac{ax}{p}\right] \equiv t +
+\left(\frac{p^2 - 1}{8}\right) \mod 2 \,\,\,\,\blacksquare\]</span></p>
+<p><strong>Теорема:</strong><a name="theorem-24"></a> (Квадратичный
+закон взаимности)<br> Пусть <span class="math inline">\(p \ne q,
+\,\,\,\, q \ne 2, \,\,\,\, p \ne 2, \,\,\,\, p, q\)</span> - простые.
+Тогда: <span class="math display">\[\left(\frac{p}{q}\right) \cdot
+\left(\frac{q}{p}\right) = (-1)^{\frac{p - 1}{2} \cdot \frac{q -
+1}{2}}\]</span></p>
+<p><em>Доказательство:</em></p>
+<h2 id="суммы-двух-и-четырех-квадратов">Суммы двух и четырех
+квадратов</h2>
+<hr />
+<p><strong>Теорема:</strong><a name="theorem-25"></a> Пусть <span
+class="math inline">\(p = 4k + 1, \,\,\,\, p\)</span> - простое. Тогда
+уравнение <span class="math inline">\(x^2 + y^2 = p\)</span> разрешимо в
+целых числах.</p>
+<p><em>Доказательство:</em></p>
+<p><strong>Лемма:</strong><a name="lemma-6"></a> Если <span
+class="math inline">\(u, v\)</span> представимы в виде суммы четырех
+квадратов, то их произведение <span class="math inline">\(u\cdot
+v\)</span> представимо в виде суммы четырех квадратов.</p>
+<p><em>Доказательство:</em> Рассмотрим числа <span
+class="math inline">\(\alpha = x_1 + ix_2, \,\,\,\, \beta = x_3 + ix_4,
+\,\,\,\, \gamma = y_1 + iy_2, \,\,\,\, \delta = y_3 + iy_4\)</span>.
+Пусть <span class="math display">\[\mathbf{A} = \left(\begin{array}{cc}
+\alpha &amp; \beta \\ -\bar{\beta} &amp; \bar{\alpha} \end{array}\right)
+\,\,\,\,\,\,\,\, \mathbf{B} = \left(\begin{array}{cc} \gamma &amp;
+\delta \\ -\bar{\delta} &amp; \bar{\gamma} \end{array}\right)\]</span>
+<span class="math display">\[\det \mathbf{A} = x_1^2 + x_2^2 + x_3^2 +
+x_4^2, \,\,\,\, \det \mathbf{B} = y_1^2 + y_2^2 + y_3^2 + y_4^2\]</span>
+<span class="math display">\[\mathbf{AB} = \left(\begin{array}{cc}
+\alpha \gamma - \beta \bar{\delta} &amp; \alpha \delta + \beta
+\bar{\gamma} \\ - \gamma \bar{\beta} - \bar{\alpha} \bar{\delta} &amp; -
+\delta \bar{\beta} + \bar{\alpha} \bar{\gamma}
+\end{array}\right)\]</span> Эта матрица имеет ту же структуру, что и
+матрицы выше, поэтому, в силу <span class="math inline">\(\det A \cdot
+\det B = \det AB\)</span>, получаем: <span class="math display">\[(x_1^2
++ x_2^2 + x_3^2 + x_4^2)(y_1^2 + y_2^2 + y_3^2 + y_4^2) = z_1^2 + z_2^2
++ z_3^2 + z_4^2 \,\,\,\,\blacksquare\]</span></p>
+<p><strong>Лемма:</strong><a name="lemma-7"></a> Для любого простого
+<span class="math inline">\(p \,\,\,\,\,\,\,\, \exists a,
+b\)</span>:<span class="math display">\[1 + a^2 + b^2 \equiv 0 \mod
+p\]</span></p>
+<p><em>Доказательство:</em> Рассмотрим множества <span
+class="math inline">\(M_1 = \{k^2, \,\,\,\, k = 0, \ldots, \frac{p -
+1}{2}\}\)</span> и <span class="math inline">\(M_2 = \{-1 - k^2,
+\,\,\,\, k = 0, \ldots, \frac{p - 1}{2}\}\)</span>. В объединении этих
+множеств <span class="math inline">\(p + 1\)</span> элемент, а по модулю
+<span class="math inline">\(p\)</span> существует <span
+class="math inline">\(p - 1\)</span> различный класс вычетов, значит
+существуют <span class="math inline">\(0 \le a \le \frac{p -
+1}{2}\)</span> и <span class="math inline">\(0 \le b \le \frac{p -
+1}{2}\)</span>, такие что <span class="math inline">\(a^2 \equiv -1 -
+b^2 \mod p \,\,\,\,\blacksquare\)</span></p>
+<p><strong>Лемма:</strong><a name="lemma-8"></a> Любое простое число
+<span class="math inline">\(p\)</span> представимо в виде суммы четырех
+квадратов.</p>
+<p><em>Доказательство:</em> Опять рассмотрение чего-то и принцип
+Дирихле.</p>
+<p><strong>Теорема:</strong><a name="theorem-26"></a> Любое натуральное
+число <span class="math inline">\(n\)</span> представимо в виде суммы
+четырех квадратов.</p>
+<p><em>Доказательство:</em> Следует из лемм <a href="#lemma-6">1</a>, <a
+href="#lemma-7">2</a>, <a href="#lemma-8">3</a> <span
+class="math inline">\(\,\,\,\,\blacksquare\)</span></p>
+<p><strong>Проблема Варинга</strong>: <span class="math inline">\(m \in
+\mathbb{Z}, \,\,\,\, k &gt; 0, \,\,\,\, k \in \mathbb{Z}\)</span>. Верно
+ли что любое <span class="math inline">\(n \in \mathbb{N}\)</span>
+представимо в виде: <span class="math display">\[n = x_1^m + \ldots +
+x_k^m, \,\,\,\,\,\,\,\, x_i \ge 0\]</span></p>
+<h2 id="показатель-числа">Показатель числа</h2>
+<hr />
+<p><strong>Определение:</strong><a name="definition-14"></a> Показатель
+числа <span class="math inline">\(a\)</span> по модулю <span
+class="math inline">\(m\)</span> (<span
+class="math inline">\(ord_ma\)</span>)<br> Рассмотрим <span
+class="math inline">\(M = \{x \in \mathbb{N}: a^x \equiv 1 \mod
+m\}\)</span><br> <span class="math inline">\(M \ne \varnothing\)</span>
+по <a href="#theorem-6">теореме Эйлера</a><br> По аксиоме Архимеда <span
+class="math inline">\(\exists \,\, \min M = ord_ma\)</span></p>
+<p><strong>Теорема:</strong><a name="theorem-7"></a> (о показателе)
+Пусть <span class="math inline">\((a, m) = 1, \,\,\,\, z \in \mathbb{N},
+\,\,\,\, a^z \equiv 1 \mod m\)</span>. Тогда <span
+class="math display">\[ord_am\,\,|\,\,z\]</span></p>
+<p><em>Доказательство:</em></p>
+<p><strong>Теорема:</strong><a name="theorem-27"></a> Пусть <span
+class="math inline">\((a, m) = 1\)</span>. Тогда <span
+class="math display">\[a^k \equiv a^n \mod m \Leftrightarrow k \equiv n
+\mod ord_ma\]</span></p>
+<p><em>Доказательство:</em></p>
+<h1 id="первообразные-корни">Первообразные корни</h1>
+<hr />
+<p><strong>Определение:</strong><a name="definition-27"></a> Пусть <span
+class="math inline">\((a, m) = 1\)</span>. Если <span
+class="math inline">\(ord_ma = \varphi(m)\)</span>, то <span
+class="math inline">\(a\)</span> - первообразный корень по модулю <span
+class="math inline">\(m\)</span>.</p>
+<p><strong>Теорема:</strong><a name="theorem-28"></a> Пусть <span
+class="math inline">\((a, m) = 1, \,\,\,\, a\)</span> - первообразный
+корень по модулю <span class="math inline">\(m\)</span>. Тогда числа
+<span class="math display">\[a^0, a^1, a^2, \ldots,
+a^{\varphi(m)}\]</span> образуют приведенную систему вычетов по модулю
+<span class="math inline">\(m\)</span>.</p>
+<p><em>Доказательство:</em></p>
+<h2
+id="существование-первообразных-корней-по-простому-модулю">Существование
+первообразных корней по простому модулю</h2>
+<hr />
+<p><strong>Теорема:</strong><a name="theorem-29"></a> По простому модулю
+<span class="math inline">\(p\)</span> существуют первообразные
+корни.</p>
+<p><em>Доказательство:</em></p>
+<a href="random.html" id="random_button" ><i class="fa-solid fa-ghost fa-lg" style="color: #363636;"></i></a>
+<a href="search.html" id="search_button" ><i class="fa-solid fa-search fa-lg" style="color: #363636;"></i></a>
+<a href="global-toc.html" id="back_button" ><i class="fa-solid fa-book fa-lg" style="color: #363636;"></i></a>
+<script src="https://kit.fontawesome.com/4b37446228.js" crossorigin="anonymous"></script>
+</body>
+</html>
