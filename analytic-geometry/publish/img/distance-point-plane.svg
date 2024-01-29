@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!-- Created by MetaPost 2.02 on 2024.01.29:2207 -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="355.041061" height="235.688889" viewBox="0 0 355.041061 235.688889">
+<!-- Original BoundingBox: -14.134506 -30.844955 340.906555 204.843933 -->
+  <path d="M14.134506 204.843933L82.165817 68.781311L252.244095 85.789139L184.212784 221.851761Z" style="stroke:rgb(0.000000%,0.000000%,0.000000%); stroke-width: 1.500000;stroke-linecap: round;stroke-linejoin: round;stroke-miterlimit: 10.000000;fill: none;"></path>
+  <path d="M82.165817 68.781311L184.212784 0.750000" style="stroke:rgb(0.000000%,0.000000%,0.000000%); stroke-width: 1.500000;stroke-linecap: round;stroke-linejoin: round;stroke-miterlimit: 10.000000;fill: none;"></path>
+  <path d="M252.244095 85.789139L354.291061 17.757828" style="stroke:rgb(0.000000%,0.000000%,0.000000%); stroke-width: 1.500000;stroke-linecap: round;stroke-linejoin: round;stroke-miterlimit: 10.000000;fill: none;"></path>
+  <path d="M184.212784 221.851761L286.259750 153.820450" style="stroke:rgb(0.000000%,0.000000%,0.000000%); stroke-width: 1.500000;stroke-linecap: round;stroke-linejoin: round;stroke-miterlimit: 10.000000;fill: none;"></path>
+  <path d="M184.212784 0.750000L354.291061 17.757828" style="stroke:rgb(0.000000%,0.000000%,0.000000%); stroke-width: 1.500000;stroke-linecap: round;stroke-linejoin: round;stroke-miterlimit: 10.000000;fill: none;"></path>
+  <path d="M354.291061 17.757828L286.259750 153.820450" style="stroke:rgb(0.000000%,0.000000%,0.000000%); stroke-width: 1.500000;stroke-linecap: round;stroke-linejoin: round;stroke-miterlimit: 10.000000;fill: none;"></path>
+  <path d="M14.134506 204.843933L116.181473 136.812622" style="stroke:rgb(0.000000%,0.000000%,0.000000%); stroke-width: 1.500000;stroke-linecap: round;stroke-dasharray: 3.000000 3.000000 ;stroke-linejoin: round;stroke-miterlimit: 10.000000;fill: none;"></path>
+  <path d="M116.181473 136.812622L184.212784 0.750000" style="stroke:rgb(0.000000%,0.000000%,0.000000%); stroke-width: 1.500000;stroke-linecap: round;stroke-dasharray: 3.000000 3.000000 ;stroke-linejoin: round;stroke-miterlimit: 10.000000;fill: none;"></path>
+  <path d="M116.181473 136.812622L286.259750 153.820450" style="stroke:rgb(0.000000%,0.000000%,0.000000%); stroke-width: 1.500000;stroke-linecap: round;stroke-dasharray: 3.000000 3.000000 ;stroke-linejoin: round;stroke-miterlimit: 10.000000;fill: none;"></path>
+  <g transform="matrix(2.000000,-0.000000,-0.000000,2.000000,0.000000 226.963562)" style="fill: rgb(0.000000%,0.000000%,0.000000%);">
+    <text font-size="9.962646">M</text>
+  </g>
+  <g transform="matrix(2.000000,-0.000000,-0.000000,2.000000,19.330414 229.952362)" style="fill: rgb(0.000000%,0.000000%,0.000000%);">
+    <text font-size="6.973846">0</text>
+  </g>
+  <path d="M14.134506 204.843933l0 0" style="stroke:rgb(0.000000%,0.000000%,0.000000%); stroke-width: 6.000000;stroke-linecap: round;stroke-linejoin: round;stroke-miterlimit: 10.000000;fill: none;"></path>
+  <g transform="matrix(2.000000,-0.000000,-0.000000,2.000000,71.414520 60.277283)" style="fill: rgb(0.000000%,0.000000%,0.000000%);">
+    <text font-size="9.962646">M</text>
+  </g>
+  <path d="M82.165817 68.781311l0 0" style="stroke:rgb(0.000000%,0.000000%,0.000000%); stroke-width: 6.000000;stroke-linecap: round;stroke-linejoin: round;stroke-miterlimit: 10.000000;fill: none;"></path>
+  <path d="M82.165817 68.781311L82.165817 187.836105" style="stroke:rgb(0.000000%,0.000000%,0.000000%); stroke-width: 1.500000;stroke-linecap: round;stroke-dasharray: 3.000000 3.000000 ;stroke-linejoin: round;stroke-miterlimit: 10.000000;fill: none;"></path>
+  <path d="M82.165817 187.836105l0 0" style="stroke:rgb(0.000000%,0.000000%,0.000000%); stroke-width: 6.000000;stroke-linecap: round;stroke-linejoin: round;stroke-miterlimit: 10.000000;fill: none;"></path>
+  <g transform="matrix(2.000000,-0.000000,-0.000000,2.000000,90.669846 135.227219)" style="fill: rgb(0.000000%,0.000000%,0.000000%);">
+    <text font-size="9.962646">h</text>
+  </g>
+  <g transform="matrix(2.000000,-0.000000,-0.000000,2.000000,60.176697 162.324249)" style="fill: rgb(0.000000%,0.000000%,0.000000%);">
+    <text font-size="9.962646">a</text>
+  </g>
+  <g transform="matrix(2.000000,-0.000000,-0.000000,2.000000,93.638840 235.688889)" style="fill: rgb(0.000000%,0.000000%,0.000000%);">
+    <text font-size="9.962646">b</text>
+  </g>
+</svg>
